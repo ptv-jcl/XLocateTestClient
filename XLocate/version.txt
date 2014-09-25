@@ -1,0 +1,34 @@
+2009-02-11 - News:
+=> ReverseSearchOption added: ENGINE_FILTERMODE
+=> Service address of xMap is now optional and dynamic
+=> tooltip shows multiple results
+
+2008-10-29 - News: 
+- Mouseevent produces tooltip
+- empty result wirthin reverse geocoding produces a map with the input coordinate (was: no map)
+
+
+2008-08-05 README for the samplication XLocate
+----------------------------------------------
+This sample is intended to offer a very simple user interface to get experienced 
+with the parameters of geocoding and reverse geocoding provided by the xlocate server.
+Please be aware that the sample deals with several restrictions, i.e. the handling
+of the parameters is much more flexible than the sample application.
+-----
+This sample is provided without warranty. Please feel free to report feedback
+or to suggest new features to: xserver.support@ptv.de
+-----
+Notes
+- If the checkbox "SearchOptions" is disabled, the forward geocoding doesn't 
+  provide explicit search options within the xml request.
+- The parameter MAX_RESULT is only evaluated if the text box is not empty.
+  ==> there is either no search option specified or 14/15.
+- If the checkbox "ReverseSearchOptions" is disabled, the reverse geocoding 
+  doesn't provide explicit reverse search options within the xml request.
+  ==> there is either no reverse search option specified or 4 of them!
+- you can onfigure default values for some   
+
+2008-08-05: BWE
+- SearchOption "MAX_RESULT" added, 
+- Most UI elements can be configured via "Settings.settings"
+- if WKT is requested, the output grid displays the WKT!

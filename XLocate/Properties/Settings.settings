@@ -1,0 +1,201 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="XLocate.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="xmap" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:50010/xmap/ws/XMap</Value>
+    </Setting>
+    <Setting Name="xlocate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:50020/xlocate/ws/XLocate</Value>
+    </Setting>
+    <Setting Name="SEARCH_BINARY" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SEARCH_PHOETIC" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SEARCH_FUZZY" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="STREET_RETURNALLHNR" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CITY_RETURNALLCITY2" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MULTIWORDINDEX_ENABLE" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="POSTCODE_AGGREGATE" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="INTERSECTIONS_ENABLE" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SearchOptions" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ReverseSearchOptions" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CallerContextProperties" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ENGINE_TOLERANCE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="ENGINE_TARGETSIZE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="RESULT_LANGUAGE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DEF</Value>
+    </Setting>
+    <Setting Name="RevRESULT_LANGUAGE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DEF</Value>
+    </Setting>
+    <Setting Name="COUNTRY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">L</Value>
+    </Setting>
+    <Setting Name="STATE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="POSTCODE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5447</Value>
+    </Setting>
+    <Setting Name="CITY" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Wellenstein</Value>
+    </Setting>
+    <Setting Name="CITY2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="STREET" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Rue de la Moselle</Value>
+    </Setting>
+    <Setting Name="HOUSENR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="LOCATION_Y" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">6372253.889732955</Value>
+    </Setting>
+    <Setting Name="LOCATION_X" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">681426.23948316672</Value>
+    </Setting>
+    <Setting Name="HNR_OFFSET" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Profile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">default</Value>
+    </Setting>
+    <Setting Name="CoordFormat" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ASTERISKMODE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="COUNTRY_CODETYPE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="SWAPANDSPLITMODE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="STREET_HNRPOSITION" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="RevCOUNTRY_CODETYPE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ResponseGeometry" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="ENGINE_FILTERMODE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="displayMap" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="REQUEST_ADDFITIONALFIELDS" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CallerContext_Log1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PTVXLocate Testclient</Value>
+    </Setting>
+    <Setting Name="CallerContext_Log2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CallerContext_Log3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ENGINE_SEARCHDETAILLEVEL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ENGINE_SEARCHRANGE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseNewFields" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MapProfile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">default</Value>
+    </Setting>
+    <Setting Name="ADDRESS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">76131 Karlsruhe, Stumpfstr. 1</Value>
+    </Setting>
+    <Setting Name="SINGLE_FIELD_SEPARATORS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">,</Value>
+    </Setting>
+    <Setting Name="XYNLAYER_PRIORITY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="XYNLAYER_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">XYN_LAYER</Value>
+    </Setting>
+    <Setting Name="RESULTADDRESSLAYER_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ResultAddress</Value>
+    </Setting>
+    <Setting Name="RESULTADDRESS_PRIORITY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1001</Value>
+    </Setting>
+    <Setting Name="XYNLAYER_LINECOLOR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#00FFFF</Value>
+    </Setting>
+    <Setting Name="XYNLAYER_LINEWIDTH" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-2</Value>
+    </Setting>
+    <Setting Name="XYNLAYER_LINEALPHA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="XYNLAYER_VISIBLE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="COMBINEDTRANSPORTLAYER_PRIORITY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1001</Value>
+    </Setting>
+    <Setting Name="COMBINEDTRANSPORTLAYER_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CombinedTransport</Value>
+    </Setting>
+    <Setting Name="COMBINEDTRANSPORTLAYER_LINEWIDTH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-2</Value>
+    </Setting>
+    <Setting Name="COMBINEDTRANSPORTLAYER_TRANSPARENCY" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="COMBINEDTRANSPORTLAYER_START" Type="System.String" Scope="User">
+      <Value Profile="(Default)">flaggreen.bmp</Value>
+    </Setting>
+    <Setting Name="COMBINEDTRANSPORTLAYER_DESTINATION" Type="System.String" Scope="User">
+      <Value Profile="(Default)">flagred.bmp</Value>
+    </Setting>
+    <Setting Name="xmap_username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xtok</Value>
+    </Setting>
+    <Setting Name="xmap_password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">706412336551701</Value>
+    </Setting>
+    <Setting Name="xlocate_username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xtok</Value>
+    </Setting>
+    <Setting Name="xlocate_password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">706412336551701</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="btnMatchAddress.ToolTip" xml:space="preserve">
+    <value>public  ResultAddress[]  matchAddress()
+Deprecated.
+As of release 1.4, replaced by findAddress()
+Searches the given address using the specified search options. Please 
+note that the default sorting order is taken from the native profile, if
+the sorting array is empty. Please note also that sorting strings 
+lexicographically is case-sensitive, i.e. 'Z' &lt; 'a' and 'z' &lt; 'é' so that 
+"Rue Robert Stumper" &lt; "Rue de Stavelot" and 
+"Rue d'Etch" &lt; "Rue d'Épernay".</value>
+  </data>
+  <data name="btnFindAddress.ToolTip" xml:space="preserve">
+    <value>public  AddressResponse  findAddress()
+Searches the given address using the specified search options. 
+Please note that the default sorting order is taken from the native 
+profile, if the sorting array is empty. Please note also that sorting
+strings lexicographically is case-sensitive, i.e. 'Z' &lt; 'a' and 'z' &lt; 'é' 
+so that "Rue Robert Stumper" &lt; "Rue de Stavelot" and 
+"Rue d'Etch" &lt; "Rue d'Épernay".</value>
+  </data>
+  <data name="labRESULT_LANGUAGE.ToolTip" xml:space="preserve">
+    <value>Specifies the result language. If a candidate has specific aliases 
+they will be returned in this language. Legal values are the ISO3
+language codes. Some examples:
+DUT - Dutch (49)
+ENG - English (50)
+FRE - French (51)
+GER - German (52)
+ITA - Italian (53)
+POR - Portuguese (54)
+SPA - Spanish (55)
+SWE - Swedish (56)
+GRE - Greek (65)</value>
+  </data>
+  <data name="labASTERISKMODE.ToolTip" xml:space="preserve">
+    <value>Specifies the asterisk mode for geocoding. This is a parameter 
+of type integer. Currently the following modes are defined:
+      0 - disable asterisk mode
+      1 - search at the beginning
+      2 - search at the end
+      3 - search at beginning and at the end</value>
+  </data>
+  <data name="labSTREET_HNRPOSITION.ToolTip" xml:space="preserve">
+    <value>Specifies where to search for house numbers in the street field. 
+Legal values are non negative integer values:
+      0 - do not search for house numbers
+      1 - search at the beginning
+      2 - search at the end
+      3 - search at beginning and at the end</value>
+  </data>
+  <data name="labSWAPANDSPLITMODE.ToolTip" xml:space="preserve">
+    <value>Specifies how the city and city district field should be treated if 
+no unique match can be made with an input. Legal values are 
+non negative integer values:
+      1 - swap city and city2
+      2 - city2 becomes city, city will be empty
+      4 - city becomes city2, city2 will be empty
+      8 - split city into city and city2
+Note that the flags specified above can be combined (or'ed).</value>
+  </data>
+  <data name="cbxUseNewFields.ToolTip" xml:space="preserve">
+    <value>xLocate 1.10 invents some new ResultField values:
+ResultField.ADDRESS_CLASSIFICATION,
+ResultField.ADDRESS_CLASSIFICATION_DESCRIPTION,
+//ResultField.POSTCODE_CLASSIFICATION,
+ResultField.TOWN_CLASSIFICATION,
+ResultField.STREET_CLASSIFICATION,
+ResultField.HOUSENR_CLASSIFICATION,
+ResultField.POSTCODE_CHARACTERISTICS,
+ResultField.TOWN_CHARACTERISTICS,
+ResultField.STREET_CHARACTERISTICS,
+ResultField.HOUSENR_CHARACTERISTICS
+If this box is checked findLocation will also request these fields.</value>
+  </data>
+  <data name="cbxCallerContextProperties.ToolTip" xml:space="preserve">
+    <value>Each method of a service requires, in addition to the business-parameters 
+an additional last argument - the so called caller context .
+The caller context is a set of properties that can be set for each request.</value>
+  </data>
+  <data name="labProfile.ToolTip" xml:space="preserve">
+    <value>Key-Value-property Profile (key=Profile)
+The value for this key is the name of a profile configured at 
+the server, that contains pre-set parameter values, such as
+speed profiles for network classes, a.s.o.
+If this value is not set, the value default is used.</value>
+  </data>
+  <data name="labCoordFormat.ToolTip" xml:space="preserve">
+    <value>Key-Value-property Coordinate format (key=CoordFormat)
+The value of this key determines the format to be used for the
+coordinates in the request and the response. Legal values are:
+OG_GEODECIMAL : WGS84 coordinates (openGIs conforming)
+PTV_MERCATOR :  	the PTV standard format
+PTV_GEOMINSEC : PTV variant of Coordinate type GeoMinSec
+PTV_GEODECIMAL : PTV variant of c type GeoDecimal (WGS 84)
+PTV_CONFORM : PTV variant of type Conform
+PTV_SUPERCONFORM : PTV specific type SuperConform
+PTV_SMARTUNITS : PTV coordinate format of the SMArt Data format</value>
+  </data>
+  <data name="labResponseGeometry.ToolTip" xml:space="preserve">
+    <value>Key-Value-property Response Geometry (key=ResponseGeometry)
+The value of this key must be a comma separated list consisting of
+some of the following values:
+PLAIN : the response should contain geometry objects in plain format,
+i.e. each point is represented by two attributes containing x and y values.
+WKB : the response should contain geometry in the Open-GIS Well Known Binary Format
+WKT : the response should contain geometry in the Open-GIS Well Known Text Format
+Specifying more than one of these values means that all of these
+response geometries are to be included in the response.</value>
+  </data>
+  <data name="btnMatchLocation.ToolTip" xml:space="preserve">
+    <value>public  ResultAddress[]  matchLocation()
+Deprecated.
+As of release 1.4, replaced by findLocation()
+Searches the nearest address to the given location. Please
+note that sorting the results is not yet implemented.</value>
+  </data>
+  <data name="tbxRevENGINE_TOLERANCE.ToolTip" xml:space="preserve">
+    <value>Tolerance when reverse geocoding. The reference is the best matching 
+candidate; all other candidates that are within a certain distance are also
+returned. The search will be tolerant for value greater than 100 (= 100%). 
+As an example, a value of 200 will return all candidates with a maximum 
+distance of twice of the best matching candidate.
+Any value less or equal than 100 switches off the tolerance mode. 
+Instead the engine will try to find as many candidates as set by 
+ENGINE_TARGETSIZE.</value>
+  </data>
+  <data name="labENGINE_FILTERMODE.ToolTip" xml:space="preserve">
+    <value>Specifies the way the xLocate will filter the reverse locating
+results. Possible values:
+      0 - filter nothing
+      1 - filter results where the street has no name
+      2 - filter streets without a name and duplicate street results.</value>
+  </data>
+  <metadata name="resultAddressBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 20</value>
+  </metadata>
+  <data name="btnFindAddressByText.ToolTip" xml:space="preserve">
+    <value>public AddressResponse findAddressByText()
+Searches the given address as a text snippet and the country using 
+the specified search options. To get the unmatched words of this search, 
+set the ResultField UNMATCHED_WORDS. to get the number of 
+unmatched words set the ResultField UNMATCHED_WORDS_COUNT. 
+A separator for the address text snippet can be defined with the 
+SearchParameter  SINGLE_FIELD_SEPARATORS as a SearchOption. 
+PREREQUISITE:  Only for maps 1/2010 or newer. 
+Please note that the default sorting order is taken from the native profile, 
+if the sorting array is empty. 
+Please note also that sorting strings lexicographically is case-sensitive,
+i.e. 'Z' &lt; 'a' and 'z' &lt; 'é' so that "Rue Robert Stumper" &lt; "Rue de Stavelot" 
+and "Rue d'Etch" &lt; "Rue d'Épernay".</value>
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value>Specifies one or more separators for the search with the method matchAddressByText().
+The separators can be listed with or without blanks.
+Only a blank as value is not allowed. A search without a separator is also possible.</value>
+  </data>
+  <metadata name="TownClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PostcodeClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="StreetClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HNClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="start_coords.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dest_coords.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UniqueGeoID_start.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UniqueGeoID_destination.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="resultCombinedTransportBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>333, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAA
+        AAAAAAAA////AMjHxgD4+PgAUUvmALSzsQCKiIcAKSHgAHl07AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAZmZgAABmZmBmZmZmZmZmYGZhERERERZgZmERESIiFmBmYREREREWYAZhERERFRZmBmERFHcR
+        FmYGZmZodyZmZgZmJIeEJmZmBmYneGZmZmZmZid0ZmZmYGYjIiJmZmZgZhIWZmZmZmBmISZmZmZmYGZm
+        ZmZmZmZgAAAGZmYAAAAHwQAAAAEAAAABAAAAAQAAAAEAAIAAAACAAAAAgAAAAIAAAACAAAAAAAEAAAAB
+        AAAAAQAAAAEAAAABAAD4PwAA
+</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value>public CombinedTransportResponse findCombinedTransportByLocation()
+Searches the nearest combined transports  to the given location.
+A combined transport can be
+=&gt; a ferry boat connection.
+=&gt; a piggyback train connection.</value>
+  </data>
+</root>
