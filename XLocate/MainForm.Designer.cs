@@ -122,46 +122,6 @@ namespace XLocate
             this.labRevRESULT_LANGUAGE = new System.Windows.Forms.Label();
             this.tbxRevRESULT_LANGUAGE = new System.Windows.Forms.TextBox();
             this.dgvResultAddresses = new System.Windows.Forms.DataGridView();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnFindAddressByText = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gbxGeocoding = new System.Windows.Forms.GroupBox();
-            this.gbxReverseGeocoding = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvResultCombinedTransport = new System.Windows.Forms.DataGridView();
-            this.TownClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PostcodeClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StreetClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HNClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.start_coords = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dest_coords = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UniqueGeoID_start = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UniqueGeoID_destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tbxSINGLE_FIELD_SEPARATORS = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tbxSfCountry = new System.Windows.Forms.TextBox();
-            this.tbxSfAddress = new System.Windows.Forms.TextBox();
-            this.coordinatesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.city2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.houseNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adminRegionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appendixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classificationDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countryCapitalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detailLevelDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultAddressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coordinatesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailLevelDescriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,6 +139,46 @@ namespace XLocate
             this.adminRegionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appendixDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.segmentIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultAddressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnFindAddressByText = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gbxGeocoding = new System.Windows.Forms.GroupBox();
+            this.gbxReverseGeocoding = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvResultCombinedTransport = new System.Windows.Forms.DataGridView();
+            this.coordinatesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.city2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.houseNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TownClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PostcodeClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StreetClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HNClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.start_coords = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dest_coords = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UniqueGeoID_start = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UniqueGeoID_destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminRegionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appendixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classificationDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countryCapitalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailLevelDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.tbxSINGLE_FIELD_SEPARATORS = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tbxSfCountry = new System.Windows.Forms.TextBox();
+            this.tbxSfAddress = new System.Windows.Forms.TextBox();
             this.resultCombinedTransportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlAddressInput.SuspendLayout();
             this.pnlSearchProperties.SuspendLayout();
@@ -188,6 +188,7 @@ namespace XLocate
             this.panResult.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultAddresses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).BeginInit();
             this.gbxGeocoding.SuspendLayout();
             this.gbxReverseGeocoding.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -196,13 +197,12 @@ namespace XLocate
             this.groupBox3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultCombinedTransportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAddressInput
             // 
-            this.pnlAddressInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlAddressInput.BackColor = System.Drawing.Color.PowderBlue;
             this.pnlAddressInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlAddressInput.Controls.Add(this.btnMatchAddress);
             this.pnlAddressInput.Controls.Add(this.labStreet);
@@ -352,7 +352,7 @@ namespace XLocate
             // 
             // pnlSearchProperties
             // 
-            this.pnlSearchProperties.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlSearchProperties.BackColor = System.Drawing.Color.PowderBlue;
             this.pnlSearchProperties.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSearchProperties.Controls.Add(this.labMAX_RESULT);
             this.pnlSearchProperties.Controls.Add(this.tbxMAX_RESULT);
@@ -650,7 +650,7 @@ namespace XLocate
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.labMapProfile);
             this.panel1.Controls.Add(this.tbxMapProfile);
@@ -759,7 +759,7 @@ namespace XLocate
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.cbxCallerContextProperties);
             this.panel2.Controls.Add(this.cboCoordFormat);
@@ -845,7 +845,7 @@ namespace XLocate
             // 
             // panLocation
             // 
-            this.panLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panLocation.BackColor = System.Drawing.Color.PowderBlue;
             this.panLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panLocation.Controls.Add(this.btnFindCombinedTransportByLocation);
             this.panLocation.Controls.Add(this.labLocation);
@@ -977,7 +977,7 @@ namespace XLocate
             // 
             // panResult
             // 
-            this.panResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panResult.BackColor = System.Drawing.Color.PowderBlue;
             this.panResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panResult.Controls.Add(this.tbxTAmin);
             this.panResult.Controls.Add(this.tbxTAavg);
@@ -1052,7 +1052,7 @@ namespace XLocate
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.BackColor = System.Drawing.Color.PowderBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.cbxFilterCity);
             this.panel3.Controls.Add(this.labENGINE_SEARCHRANGE);
@@ -1245,333 +1245,6 @@ namespace XLocate
             this.dgvResultAddresses.TabIndex = 16;
             this.dgvResultAddresses.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvResultAddresses_CellMouseClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Country";
-            this.toolTip1.SetToolTip(this.label2, "\tThe country to search in. ");
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Address";
-            this.toolTip1.SetToolTip(this.label3, "Input address as a text snippet. ");
-            // 
-            // btnFindAddressByText
-            // 
-            this.btnFindAddressByText.Location = new System.Drawing.Point(200, 26);
-            this.btnFindAddressByText.Name = "btnFindAddressByText";
-            this.btnFindAddressByText.Size = new System.Drawing.Size(110, 23);
-            this.btnFindAddressByText.TabIndex = 20;
-            this.btnFindAddressByText.Text = "findAddressByText";
-            this.toolTip1.SetToolTip(this.btnFindAddressByText, resources.GetString("btnFindAddressByText.ToolTip"));
-            this.btnFindAddressByText.UseVisualStyleBackColor = true;
-            this.btnFindAddressByText.Click += new System.EventHandler(this.btnProcessAddress_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "SINGLE_FIELD_SEPARATORS";
-            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
-            // 
-            // gbxGeocoding
-            // 
-            this.gbxGeocoding.BackColor = System.Drawing.Color.Cyan;
-            this.gbxGeocoding.Controls.Add(this.pnlSearchProperties);
-            this.gbxGeocoding.Controls.Add(this.pnlAddressInput);
-            this.gbxGeocoding.Location = new System.Drawing.Point(12, 12);
-            this.gbxGeocoding.Name = "gbxGeocoding";
-            this.gbxGeocoding.Size = new System.Drawing.Size(573, 398);
-            this.gbxGeocoding.TabIndex = 21;
-            this.gbxGeocoding.TabStop = false;
-            this.gbxGeocoding.Text = "Geocoding";
-            // 
-            // gbxReverseGeocoding
-            // 
-            this.gbxReverseGeocoding.BackColor = System.Drawing.Color.Cyan;
-            this.gbxReverseGeocoding.Controls.Add(this.panLocation);
-            this.gbxReverseGeocoding.Controls.Add(this.panel3);
-            this.gbxReverseGeocoding.Location = new System.Drawing.Point(591, 12);
-            this.gbxReverseGeocoding.Name = "gbxReverseGeocoding";
-            this.gbxReverseGeocoding.Size = new System.Drawing.Size(451, 398);
-            this.gbxReverseGeocoding.TabIndex = 23;
-            this.gbxReverseGeocoding.TabStop = false;
-            this.gbxReverseGeocoding.Text = "Reverse geocoding";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Cyan;
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.panResult);
-            this.groupBox1.Location = new System.Drawing.Point(458, 416);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(584, 202);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Client properties";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.groupBox2.Controls.Add(this.dgvResultCombinedTransport);
-            this.groupBox2.Controls.Add(this.dgvResultAddresses);
-            this.groupBox2.Location = new System.Drawing.Point(12, 624);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1031, 100);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ResultAddresses";
-            // 
-            // dgvResultCombinedTransport
-            // 
-            this.dgvResultCombinedTransport.AutoGenerateColumns = false;
-            this.dgvResultCombinedTransport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultCombinedTransport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.coordinatesDataGridViewTextBoxColumn,
-            this.countryDataGridViewTextBoxColumn,
-            this.postCodeDataGridViewTextBoxColumn,
-            this.cityDataGridViewTextBoxColumn,
-            this.city2DataGridViewTextBoxColumn,
-            this.streetDataGridViewTextBoxColumn,
-            this.houseNumberDataGridViewTextBoxColumn,
-            this.TownClassification,
-            this.PostcodeClassification,
-            this.StreetClassification,
-            this.HNClassification,
-            this.start_coords,
-            this.dest_coords,
-            this.UniqueGeoID_start,
-            this.UniqueGeoID_destination,
-            this.adminRegionDataGridViewTextBoxColumn,
-            this.appendixDataGridViewTextBoxColumn,
-            this.classificationDescriptionDataGridViewTextBoxColumn,
-            this.countryCapitalDataGridViewTextBoxColumn,
-            this.detailLevelDescriptionDataGridViewTextBoxColumn,
-            this.totalScoreDataGridViewTextBoxColumn,
-            this.segmentIdDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn});
-            this.dgvResultCombinedTransport.DataSource = this.resultAddressBindingSource;
-            this.dgvResultCombinedTransport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvResultCombinedTransport.Location = new System.Drawing.Point(3, 16);
-            this.dgvResultCombinedTransport.Name = "dgvResultCombinedTransport";
-            this.dgvResultCombinedTransport.Size = new System.Drawing.Size(1025, 81);
-            this.dgvResultCombinedTransport.TabIndex = 17;
-            // 
-            // TownClassification
-            // 
-            this.TownClassification.DataPropertyName = "TownClassification";
-            this.TownClassification.HeaderText = "TownClassification";
-            this.TownClassification.Name = "TownClassification";
-            // 
-            // PostcodeClassification
-            // 
-            this.PostcodeClassification.DataPropertyName = "PostcodeClassification";
-            this.PostcodeClassification.HeaderText = "PostcodeClassification";
-            this.PostcodeClassification.Name = "PostcodeClassification";
-            // 
-            // StreetClassification
-            // 
-            this.StreetClassification.DataPropertyName = "StreetClassification";
-            this.StreetClassification.HeaderText = "StreetClassification";
-            this.StreetClassification.Name = "StreetClassification";
-            // 
-            // HNClassification
-            // 
-            this.HNClassification.DataPropertyName = "HNClassification";
-            this.HNClassification.HeaderText = "HNClassification";
-            this.HNClassification.Name = "HNClassification";
-            // 
-            // start_coords
-            // 
-            this.start_coords.HeaderText = "start_coords";
-            this.start_coords.Name = "start_coords";
-            // 
-            // dest_coords
-            // 
-            this.dest_coords.HeaderText = "dest_coords";
-            this.dest_coords.Name = "dest_coords";
-            // 
-            // UniqueGeoID_start
-            // 
-            this.UniqueGeoID_start.HeaderText = "UniqueGeoID_start";
-            this.UniqueGeoID_start.Name = "UniqueGeoID_start";
-            // 
-            // UniqueGeoID_destination
-            // 
-            this.UniqueGeoID_destination.HeaderText = "UniqueGeoID_destination";
-            this.UniqueGeoID_destination.Name = "UniqueGeoID_destination";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Cyan;
-            this.groupBox3.Controls.Add(this.panel5);
-            this.groupBox3.Controls.Add(this.panel4);
-            this.groupBox3.Location = new System.Drawing.Point(12, 416);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(440, 202);
-            this.groupBox3.TabIndex = 26;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Single field search";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.tbxSINGLE_FIELD_SEPARATORS);
-            this.panel5.Location = new System.Drawing.Point(6, 103);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(428, 84);
-            this.panel5.TabIndex = 22;
-            // 
-            // tbxSINGLE_FIELD_SEPARATORS
-            // 
-            this.tbxSINGLE_FIELD_SEPARATORS.Location = new System.Drawing.Point(174, 3);
-            this.tbxSINGLE_FIELD_SEPARATORS.Name = "tbxSINGLE_FIELD_SEPARATORS";
-            this.tbxSINGLE_FIELD_SEPARATORS.Size = new System.Drawing.Size(240, 20);
-            this.tbxSINGLE_FIELD_SEPARATORS.TabIndex = 2;
-            this.tbxSINGLE_FIELD_SEPARATORS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnFindAddressByText);
-            this.panel4.Controls.Add(this.tbxSfCountry);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.tbxSfAddress);
-            this.panel4.Location = new System.Drawing.Point(6, 19);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(428, 78);
-            this.panel4.TabIndex = 21;
-            // 
-            // tbxSfCountry
-            // 
-            this.tbxSfCountry.Location = new System.Drawing.Point(83, 29);
-            this.tbxSfCountry.Name = "tbxSfCountry";
-            this.tbxSfCountry.Size = new System.Drawing.Size(111, 20);
-            this.tbxSfCountry.TabIndex = 15;
-            this.tbxSfCountry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbxSfAddress
-            // 
-            this.tbxSfAddress.Location = new System.Drawing.Point(83, 3);
-            this.tbxSfAddress.Name = "tbxSfAddress";
-            this.tbxSfAddress.Size = new System.Drawing.Size(331, 20);
-            this.tbxSfAddress.TabIndex = 2;
-            this.tbxSfAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // coordinatesDataGridViewTextBoxColumn
-            // 
-            this.coordinatesDataGridViewTextBoxColumn.DataPropertyName = "coordinates";
-            this.coordinatesDataGridViewTextBoxColumn.HeaderText = "coordinates";
-            this.coordinatesDataGridViewTextBoxColumn.Name = "coordinatesDataGridViewTextBoxColumn";
-            // 
-            // countryDataGridViewTextBoxColumn
-            // 
-            this.countryDataGridViewTextBoxColumn.DataPropertyName = "country";
-            this.countryDataGridViewTextBoxColumn.HeaderText = "country";
-            this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
-            // 
-            // postCodeDataGridViewTextBoxColumn
-            // 
-            this.postCodeDataGridViewTextBoxColumn.DataPropertyName = "postCode";
-            this.postCodeDataGridViewTextBoxColumn.HeaderText = "postCode";
-            this.postCodeDataGridViewTextBoxColumn.Name = "postCodeDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // city2DataGridViewTextBoxColumn
-            // 
-            this.city2DataGridViewTextBoxColumn.DataPropertyName = "city2";
-            this.city2DataGridViewTextBoxColumn.HeaderText = "city2";
-            this.city2DataGridViewTextBoxColumn.Name = "city2DataGridViewTextBoxColumn";
-            // 
-            // streetDataGridViewTextBoxColumn
-            // 
-            this.streetDataGridViewTextBoxColumn.DataPropertyName = "street";
-            this.streetDataGridViewTextBoxColumn.HeaderText = "street";
-            this.streetDataGridViewTextBoxColumn.Name = "streetDataGridViewTextBoxColumn";
-            // 
-            // houseNumberDataGridViewTextBoxColumn
-            // 
-            this.houseNumberDataGridViewTextBoxColumn.DataPropertyName = "houseNumber";
-            this.houseNumberDataGridViewTextBoxColumn.HeaderText = "houseNumber";
-            this.houseNumberDataGridViewTextBoxColumn.Name = "houseNumberDataGridViewTextBoxColumn";
-            // 
-            // adminRegionDataGridViewTextBoxColumn
-            // 
-            this.adminRegionDataGridViewTextBoxColumn.DataPropertyName = "adminRegion";
-            this.adminRegionDataGridViewTextBoxColumn.HeaderText = "adminRegion";
-            this.adminRegionDataGridViewTextBoxColumn.Name = "adminRegionDataGridViewTextBoxColumn";
-            // 
-            // appendixDataGridViewTextBoxColumn
-            // 
-            this.appendixDataGridViewTextBoxColumn.DataPropertyName = "appendix";
-            this.appendixDataGridViewTextBoxColumn.HeaderText = "appendix";
-            this.appendixDataGridViewTextBoxColumn.Name = "appendixDataGridViewTextBoxColumn";
-            // 
-            // classificationDescriptionDataGridViewTextBoxColumn
-            // 
-            this.classificationDescriptionDataGridViewTextBoxColumn.DataPropertyName = "classificationDescription";
-            this.classificationDescriptionDataGridViewTextBoxColumn.HeaderText = "classificationDescription";
-            this.classificationDescriptionDataGridViewTextBoxColumn.Name = "classificationDescriptionDataGridViewTextBoxColumn";
-            // 
-            // countryCapitalDataGridViewTextBoxColumn
-            // 
-            this.countryCapitalDataGridViewTextBoxColumn.DataPropertyName = "countryCapital";
-            this.countryCapitalDataGridViewTextBoxColumn.HeaderText = "countryCapital";
-            this.countryCapitalDataGridViewTextBoxColumn.Name = "countryCapitalDataGridViewTextBoxColumn";
-            // 
-            // detailLevelDescriptionDataGridViewTextBoxColumn
-            // 
-            this.detailLevelDescriptionDataGridViewTextBoxColumn.DataPropertyName = "detailLevelDescription";
-            this.detailLevelDescriptionDataGridViewTextBoxColumn.HeaderText = "detailLevelDescription";
-            this.detailLevelDescriptionDataGridViewTextBoxColumn.Name = "detailLevelDescriptionDataGridViewTextBoxColumn";
-            // 
-            // totalScoreDataGridViewTextBoxColumn
-            // 
-            this.totalScoreDataGridViewTextBoxColumn.DataPropertyName = "totalScore";
-            this.totalScoreDataGridViewTextBoxColumn.HeaderText = "totalScore";
-            this.totalScoreDataGridViewTextBoxColumn.Name = "totalScoreDataGridViewTextBoxColumn";
-            // 
-            // segmentIdDataGridViewTextBoxColumn
-            // 
-            this.segmentIdDataGridViewTextBoxColumn.DataPropertyName = "segmentId";
-            this.segmentIdDataGridViewTextBoxColumn.HeaderText = "segmentId";
-            this.segmentIdDataGridViewTextBoxColumn.Name = "segmentIdDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // resultAddressBindingSource
-            // 
-            this.resultAddressBindingSource.DataSource = typeof(XServer.ResultAddress);
-            // 
             // coordinatesDataGridViewTextBoxColumn1
             // 
             this.coordinatesDataGridViewTextBoxColumn1.DataPropertyName = "coordinates";
@@ -1691,6 +1364,334 @@ namespace XLocate
             this.segmentIdDataGridViewTextBoxColumn1.Name = "segmentIdDataGridViewTextBoxColumn1";
             this.segmentIdDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // resultAddressBindingSource
+            // 
+            this.resultAddressBindingSource.DataSource = typeof(XServer.ResultAddress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Country";
+            this.toolTip1.SetToolTip(this.label2, "\tThe country to search in. ");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Address";
+            this.toolTip1.SetToolTip(this.label3, "Input address as a text snippet. ");
+            // 
+            // btnFindAddressByText
+            // 
+            this.btnFindAddressByText.Location = new System.Drawing.Point(200, 26);
+            this.btnFindAddressByText.Name = "btnFindAddressByText";
+            this.btnFindAddressByText.Size = new System.Drawing.Size(110, 23);
+            this.btnFindAddressByText.TabIndex = 20;
+            this.btnFindAddressByText.Text = "findAddressByText";
+            this.toolTip1.SetToolTip(this.btnFindAddressByText, resources.GetString("btnFindAddressByText.ToolTip"));
+            this.btnFindAddressByText.UseVisualStyleBackColor = true;
+            this.btnFindAddressByText.Click += new System.EventHandler(this.btnProcessAddress_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "SINGLE_FIELD_SEPARATORS";
+            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
+            // 
+            // gbxGeocoding
+            // 
+            this.gbxGeocoding.BackColor = System.Drawing.Color.PowderBlue;
+            this.gbxGeocoding.Controls.Add(this.pnlSearchProperties);
+            this.gbxGeocoding.Controls.Add(this.pnlAddressInput);
+            this.gbxGeocoding.Location = new System.Drawing.Point(12, 12);
+            this.gbxGeocoding.Name = "gbxGeocoding";
+            this.gbxGeocoding.Size = new System.Drawing.Size(573, 398);
+            this.gbxGeocoding.TabIndex = 21;
+            this.gbxGeocoding.TabStop = false;
+            this.gbxGeocoding.Text = "Geocoding";
+            // 
+            // gbxReverseGeocoding
+            // 
+            this.gbxReverseGeocoding.BackColor = System.Drawing.Color.PowderBlue;
+            this.gbxReverseGeocoding.Controls.Add(this.panLocation);
+            this.gbxReverseGeocoding.Controls.Add(this.panel3);
+            this.gbxReverseGeocoding.Location = new System.Drawing.Point(591, 12);
+            this.gbxReverseGeocoding.Name = "gbxReverseGeocoding";
+            this.gbxReverseGeocoding.Size = new System.Drawing.Size(451, 398);
+            this.gbxReverseGeocoding.TabIndex = 23;
+            this.gbxReverseGeocoding.TabStop = false;
+            this.gbxReverseGeocoding.Text = "Reverse geocoding";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.PowderBlue;
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.panResult);
+            this.groupBox1.Location = new System.Drawing.Point(458, 416);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(584, 202);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Client properties";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.BackColor = System.Drawing.Color.PowderBlue;
+            this.groupBox2.Controls.Add(this.dgvResultCombinedTransport);
+            this.groupBox2.Controls.Add(this.dgvResultAddresses);
+            this.groupBox2.Location = new System.Drawing.Point(12, 624);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1031, 100);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "ResultAddresses";
+            // 
+            // dgvResultCombinedTransport
+            // 
+            this.dgvResultCombinedTransport.AutoGenerateColumns = false;
+            this.dgvResultCombinedTransport.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvResultCombinedTransport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultCombinedTransport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.coordinatesDataGridViewTextBoxColumn,
+            this.countryDataGridViewTextBoxColumn,
+            this.postCodeDataGridViewTextBoxColumn,
+            this.cityDataGridViewTextBoxColumn,
+            this.city2DataGridViewTextBoxColumn,
+            this.streetDataGridViewTextBoxColumn,
+            this.houseNumberDataGridViewTextBoxColumn,
+            this.TownClassification,
+            this.PostcodeClassification,
+            this.StreetClassification,
+            this.HNClassification,
+            this.start_coords,
+            this.dest_coords,
+            this.UniqueGeoID_start,
+            this.UniqueGeoID_destination,
+            this.adminRegionDataGridViewTextBoxColumn,
+            this.appendixDataGridViewTextBoxColumn,
+            this.classificationDescriptionDataGridViewTextBoxColumn,
+            this.countryCapitalDataGridViewTextBoxColumn,
+            this.detailLevelDescriptionDataGridViewTextBoxColumn,
+            this.totalScoreDataGridViewTextBoxColumn,
+            this.segmentIdDataGridViewTextBoxColumn,
+            this.stateDataGridViewTextBoxColumn});
+            this.dgvResultCombinedTransport.DataSource = this.resultAddressBindingSource;
+            this.dgvResultCombinedTransport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvResultCombinedTransport.Location = new System.Drawing.Point(3, 16);
+            this.dgvResultCombinedTransport.Name = "dgvResultCombinedTransport";
+            this.dgvResultCombinedTransport.Size = new System.Drawing.Size(1025, 81);
+            this.dgvResultCombinedTransport.TabIndex = 17;
+            // 
+            // coordinatesDataGridViewTextBoxColumn
+            // 
+            this.coordinatesDataGridViewTextBoxColumn.DataPropertyName = "coordinates";
+            this.coordinatesDataGridViewTextBoxColumn.HeaderText = "coordinates";
+            this.coordinatesDataGridViewTextBoxColumn.Name = "coordinatesDataGridViewTextBoxColumn";
+            // 
+            // countryDataGridViewTextBoxColumn
+            // 
+            this.countryDataGridViewTextBoxColumn.DataPropertyName = "country";
+            this.countryDataGridViewTextBoxColumn.HeaderText = "country";
+            this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            // 
+            // postCodeDataGridViewTextBoxColumn
+            // 
+            this.postCodeDataGridViewTextBoxColumn.DataPropertyName = "postCode";
+            this.postCodeDataGridViewTextBoxColumn.HeaderText = "postCode";
+            this.postCodeDataGridViewTextBoxColumn.Name = "postCodeDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // city2DataGridViewTextBoxColumn
+            // 
+            this.city2DataGridViewTextBoxColumn.DataPropertyName = "city2";
+            this.city2DataGridViewTextBoxColumn.HeaderText = "city2";
+            this.city2DataGridViewTextBoxColumn.Name = "city2DataGridViewTextBoxColumn";
+            // 
+            // streetDataGridViewTextBoxColumn
+            // 
+            this.streetDataGridViewTextBoxColumn.DataPropertyName = "street";
+            this.streetDataGridViewTextBoxColumn.HeaderText = "street";
+            this.streetDataGridViewTextBoxColumn.Name = "streetDataGridViewTextBoxColumn";
+            // 
+            // houseNumberDataGridViewTextBoxColumn
+            // 
+            this.houseNumberDataGridViewTextBoxColumn.DataPropertyName = "houseNumber";
+            this.houseNumberDataGridViewTextBoxColumn.HeaderText = "houseNumber";
+            this.houseNumberDataGridViewTextBoxColumn.Name = "houseNumberDataGridViewTextBoxColumn";
+            // 
+            // TownClassification
+            // 
+            this.TownClassification.DataPropertyName = "TownClassification";
+            this.TownClassification.HeaderText = "TownClassification";
+            this.TownClassification.Name = "TownClassification";
+            // 
+            // PostcodeClassification
+            // 
+            this.PostcodeClassification.DataPropertyName = "PostcodeClassification";
+            this.PostcodeClassification.HeaderText = "PostcodeClassification";
+            this.PostcodeClassification.Name = "PostcodeClassification";
+            // 
+            // StreetClassification
+            // 
+            this.StreetClassification.DataPropertyName = "StreetClassification";
+            this.StreetClassification.HeaderText = "StreetClassification";
+            this.StreetClassification.Name = "StreetClassification";
+            // 
+            // HNClassification
+            // 
+            this.HNClassification.DataPropertyName = "HNClassification";
+            this.HNClassification.HeaderText = "HNClassification";
+            this.HNClassification.Name = "HNClassification";
+            // 
+            // start_coords
+            // 
+            this.start_coords.HeaderText = "start_coords";
+            this.start_coords.Name = "start_coords";
+            // 
+            // dest_coords
+            // 
+            this.dest_coords.HeaderText = "dest_coords";
+            this.dest_coords.Name = "dest_coords";
+            // 
+            // UniqueGeoID_start
+            // 
+            this.UniqueGeoID_start.HeaderText = "UniqueGeoID_start";
+            this.UniqueGeoID_start.Name = "UniqueGeoID_start";
+            // 
+            // UniqueGeoID_destination
+            // 
+            this.UniqueGeoID_destination.HeaderText = "UniqueGeoID_destination";
+            this.UniqueGeoID_destination.Name = "UniqueGeoID_destination";
+            // 
+            // adminRegionDataGridViewTextBoxColumn
+            // 
+            this.adminRegionDataGridViewTextBoxColumn.DataPropertyName = "adminRegion";
+            this.adminRegionDataGridViewTextBoxColumn.HeaderText = "adminRegion";
+            this.adminRegionDataGridViewTextBoxColumn.Name = "adminRegionDataGridViewTextBoxColumn";
+            // 
+            // appendixDataGridViewTextBoxColumn
+            // 
+            this.appendixDataGridViewTextBoxColumn.DataPropertyName = "appendix";
+            this.appendixDataGridViewTextBoxColumn.HeaderText = "appendix";
+            this.appendixDataGridViewTextBoxColumn.Name = "appendixDataGridViewTextBoxColumn";
+            // 
+            // classificationDescriptionDataGridViewTextBoxColumn
+            // 
+            this.classificationDescriptionDataGridViewTextBoxColumn.DataPropertyName = "classificationDescription";
+            this.classificationDescriptionDataGridViewTextBoxColumn.HeaderText = "classificationDescription";
+            this.classificationDescriptionDataGridViewTextBoxColumn.Name = "classificationDescriptionDataGridViewTextBoxColumn";
+            // 
+            // countryCapitalDataGridViewTextBoxColumn
+            // 
+            this.countryCapitalDataGridViewTextBoxColumn.DataPropertyName = "countryCapital";
+            this.countryCapitalDataGridViewTextBoxColumn.HeaderText = "countryCapital";
+            this.countryCapitalDataGridViewTextBoxColumn.Name = "countryCapitalDataGridViewTextBoxColumn";
+            // 
+            // detailLevelDescriptionDataGridViewTextBoxColumn
+            // 
+            this.detailLevelDescriptionDataGridViewTextBoxColumn.DataPropertyName = "detailLevelDescription";
+            this.detailLevelDescriptionDataGridViewTextBoxColumn.HeaderText = "detailLevelDescription";
+            this.detailLevelDescriptionDataGridViewTextBoxColumn.Name = "detailLevelDescriptionDataGridViewTextBoxColumn";
+            // 
+            // totalScoreDataGridViewTextBoxColumn
+            // 
+            this.totalScoreDataGridViewTextBoxColumn.DataPropertyName = "totalScore";
+            this.totalScoreDataGridViewTextBoxColumn.HeaderText = "totalScore";
+            this.totalScoreDataGridViewTextBoxColumn.Name = "totalScoreDataGridViewTextBoxColumn";
+            // 
+            // segmentIdDataGridViewTextBoxColumn
+            // 
+            this.segmentIdDataGridViewTextBoxColumn.DataPropertyName = "segmentId";
+            this.segmentIdDataGridViewTextBoxColumn.HeaderText = "segmentId";
+            this.segmentIdDataGridViewTextBoxColumn.Name = "segmentIdDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.PowderBlue;
+            this.groupBox3.Controls.Add(this.panel5);
+            this.groupBox3.Controls.Add(this.panel4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 416);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(440, 202);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Single field search";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.tbxSINGLE_FIELD_SEPARATORS);
+            this.panel5.Location = new System.Drawing.Point(6, 103);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(428, 84);
+            this.panel5.TabIndex = 22;
+            // 
+            // tbxSINGLE_FIELD_SEPARATORS
+            // 
+            this.tbxSINGLE_FIELD_SEPARATORS.Location = new System.Drawing.Point(174, 3);
+            this.tbxSINGLE_FIELD_SEPARATORS.Name = "tbxSINGLE_FIELD_SEPARATORS";
+            this.tbxSINGLE_FIELD_SEPARATORS.Size = new System.Drawing.Size(240, 20);
+            this.tbxSINGLE_FIELD_SEPARATORS.TabIndex = 2;
+            this.tbxSINGLE_FIELD_SEPARATORS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btnFindAddressByText);
+            this.panel4.Controls.Add(this.tbxSfCountry);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.tbxSfAddress);
+            this.panel4.Location = new System.Drawing.Point(6, 19);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(428, 78);
+            this.panel4.TabIndex = 21;
+            // 
+            // tbxSfCountry
+            // 
+            this.tbxSfCountry.Location = new System.Drawing.Point(83, 29);
+            this.tbxSfCountry.Name = "tbxSfCountry";
+            this.tbxSfCountry.Size = new System.Drawing.Size(111, 20);
+            this.tbxSfCountry.TabIndex = 15;
+            this.tbxSfCountry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxSfAddress
+            // 
+            this.tbxSfAddress.Location = new System.Drawing.Point(83, 3);
+            this.tbxSfAddress.Name = "tbxSfAddress";
+            this.tbxSfAddress.Size = new System.Drawing.Size(331, 20);
+            this.tbxSfAddress.TabIndex = 2;
+            this.tbxSfAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // resultCombinedTransportBindingSource
             // 
             this.resultCombinedTransportBindingSource.DataSource = typeof(XServer.ResultCombinedTransport);
@@ -1699,6 +1700,7 @@ namespace XLocate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1055, 742);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -1725,6 +1727,7 @@ namespace XLocate
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultAddresses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).EndInit();
             this.gbxGeocoding.ResumeLayout(false);
             this.gbxReverseGeocoding.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1735,7 +1738,6 @@ namespace XLocate
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultCombinedTransportBindingSource)).EndInit();
             this.ResumeLayout(false);
 
