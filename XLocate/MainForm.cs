@@ -301,7 +301,26 @@ namespace XLocate
                                 }
                         }
                     };
-                    combinedTransportResponse = locateService.findCombinedTransportByLocation(inputLocation, null, resultField_CombinedTransport, cc);
+
+                    List<ReverseSearchOption> lstReverseSearchOptions = new List<ReverseSearchOption>();
+                    if (cbxReverseSearchOptions.Checked)
+                    {
+                        lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.COUNTRY_CODETYPE, cboRevCOUNTRY_CODETYPE));
+                        if (tbxRevENGINE_TARGETSIZE.Text != "")
+                            lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_TARGETSIZE, tbxRevENGINE_TARGETSIZE.Text));
+                        if (tbxRevENGINE_TOLERANCE.Text != "")
+                            lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_TOLERANCE, tbxRevENGINE_TOLERANCE.Text));
+                        if (tbxRevRESULT_LANGUAGE.Text != "")
+                            lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.RESULT_LANGUAGE, tbxRevRESULT_LANGUAGE.Text));
+                        if (tbxENGINE_FILTERMODE.Text != "")
+                            lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_FILTERMODE, tbxENGINE_FILTERMODE.Text));
+                        if (tbxENGINE_SEARCHDETAILLEVEL.Text != "")
+                            lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_SEARCHDETAILLEVEL, tbxENGINE_SEARCHDETAILLEVEL.Text));
+                        if (tbxENGINE_SEARCHRANGE.Text != "")
+                            lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_SEARCHRANGE, tbxENGINE_SEARCHRANGE.Text));
+                    }
+
+                    combinedTransportResponse = locateService.findCombinedTransportByLocation(inputLocation, lstReverseSearchOptions.ToArray(), resultField_CombinedTransport, cc);
 
                     startTime = DateTime.Now;
                     displayTransactionTime(startTime);
