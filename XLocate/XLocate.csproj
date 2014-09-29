@@ -87,6 +87,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="bin\Release\XLocate.exe.config" />
     <None Include="Properties\DataSources\XServer.ResultAddress.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,6 +104,8 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Release\XLocate.exe" />
+    <Content Include="bin\Release\XLocate.pdb" />
     <Content Include="favicon.ico" />
     <Content Include="version.txt" />
   </ItemGroup>
