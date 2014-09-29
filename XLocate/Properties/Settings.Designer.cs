@@ -431,15 +431,27 @@ namespace XLocate.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Malmö")]
-        public string ADDRESS {
+        public string SingleFieldText {
             get {
-                return ((string)(this["ADDRESS"]));
+                return ((string)(this["SingleFieldText"]));
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("S")]
+        public string SingleFieldCountry {
+            get {
+                return ((string)(this["SingleFieldCountry"]));
+            }
+            set {
+                this["SingleFieldCountry"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(",")]
         public string SINGLE_FIELD_SEPARATORS {
             get {
                 return ((string)(this["SINGLE_FIELD_SEPARATORS"]));

@@ -137,11 +137,14 @@
     <Setting Name="MapProfile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">default</Value>
     </Setting>
-    <Setting Name="ADDRESS" Type="System.String" Scope="Application">
+    <Setting Name="SingleFieldText" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Malmö</Value>
     </Setting>
+    <Setting Name="SingleFieldCountry" Type="System.String" Scope="User">
+      <Value Profile="(Default)">S</Value>
+    </Setting>
     <Setting Name="SINGLE_FIELD_SEPARATORS" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">,</Value>
     </Setting>
     <Setting Name="XYNLAYER_PRIORITY" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>

@@ -22,7 +22,6 @@ namespace XLocate
         MapSection mapSection = new MapSection();
         ResultAddress[] resultAddresses = null;
         ResultCombinedTransport[] resultCombinedTransports = null;
-        ResultObject[] resultObects = null;
         ResultField[] resultField_Address;
         ResultField[] resultField_Location;
         ResultField[] resultField_AddressByText;
@@ -90,20 +89,22 @@ namespace XLocate
             // 20100709 - MapProfile 
             tbxMapProfile.Text = Properties.Settings.Default.MapProfile;
             //2011-03-23 Single field search...
-            tbxSfAddress.Text = Properties.Settings.Default.ADDRESS;
-            tbxSfCountry.Text = Properties.Settings.Default.COUNTRY;
-            tbxSINGLE_FIELD_SEPARATORS.Text = Properties.Settings.Default.SINGLE_FIELD_SEPARATORS;
+            singleFieldTextTxtBx.Text = Properties.Settings.Default.SingleFieldText;
+            singleFieldCountryTxtBx.Text = Properties.Settings.Default.SingleFieldCountry;
+            singleFieldSeparatorsTxtBx.Text = Properties.Settings.Default.SINGLE_FIELD_SEPARATORS;
 
             // Username / Password via Basic HTTP Authentification
             locateService.Credentials = new NetworkCredential(Properties.Settings.Default.xlocate_username, Properties.Settings.Default.xlocate_password);
 
             toolTip1.AutoPopDelay = int.MaxValue;
+
+            resultSplitContainer.Panel2Collapsed = true;
         }
 
         private void btnProcessAddress_Click(object sender, EventArgs e)
         {
             Button evtButton = (Button)sender;
-            
+
             // TODO check if reset buttons resets everything
             resetButtons();
             List<Layer> lstLayer = new List<Layer>();
@@ -153,7 +154,6 @@ namespace XLocate
 
                 resultAddresses = null;
                 resultCombinedTransports = null;
-                resultObects = null;
                 AddressResponse addressResponse = null;
                 CombinedTransportResponse combinedTransportResponse = null;
                 ObjectResponse objectResponse = null;
@@ -266,15 +266,15 @@ namespace XLocate
                 // 2011-03-23 SingleField Search
                 else if (evtButton.Equals(btnFindAddressByText))
                 {
-                    string sfAddress = tbxSfAddress.Text;
-                    string sfCountry = tbxSfCountry.Text;
+                    string sfAddress = singleFieldTextTxtBx.Text;
+                    string sfCountry = singleFieldCountryTxtBx.Text;
                     XServer.SearchOption[] arrSO;
-                    if (tbxSINGLE_FIELD_SEPARATORS.Text != "")
+                    if (singleFieldSeparatorsTxtBx.Text != "")
                     {
                         XServer.SearchOption soSINGLE_FIELD_SEPARATORS = new XServer.SearchOption()
                         {
                             param = SearchParameter.SINGLE_FIELD_SEPARATORS,
-                            value = tbxSINGLE_FIELD_SEPARATORS.Text
+                            value = singleFieldSeparatorsTxtBx.Text
                         };
                         arrSO = new XServer.SearchOption[] { soSINGLE_FIELD_SEPARATORS };
                     }
@@ -308,18 +308,15 @@ namespace XLocate
                 }
                 else if (evtButton.Equals(btnFindObjectByText))
                 {
-                    string text = tbxSfAddress.Text;
-                    string country = tbxSfCountry.Text;
-
                     List<XServer.SearchOption> searchOptionList = new List<XServer.SearchOption>();
 
-                    if (tbxSINGLE_FIELD_SEPARATORS.Text != "")
+                    if (singleFieldSeparatorsTxtBx.Text != "")
                     {
-                        searchOptionList.Add(buildSearchOption(SearchParameter.SINGLE_FIELD_SEPARATORS, tbxSINGLE_FIELD_SEPARATORS.Text));
+                        searchOptionList.Add(buildSearchOption(SearchParameter.SINGLE_FIELD_SEPARATORS, singleFieldSeparatorsTxtBx.Text));
                     }
                     searchOptionList.Add(buildSearchOption(SearchParameter.ENGINE_COMBINEDTRANSPORTSEARCH_ENABLE, cbxEngineCombinedTransportEnabled.Checked.ToString()));
-                    searchOptionList.Add(buildSearchOption(SearchParameter.ENGINE_ADDRESSSEARCH_ENABLE, cbxEngineAddressEnable.Checked.ToString()));  
-      
+                    searchOptionList.Add(buildSearchOption(SearchParameter.ENGINE_ADDRESSSEARCH_ENABLE, cbxEngineAddressEnable.Checked.ToString()));
+
                     // TODO check if it is usefull to also add the other search options
                     //if (cbxSearchOptions.Checked)
                     //{
@@ -343,9 +340,8 @@ namespace XLocate
                     //    //
                     //}
 
-
                     startTime = DateTime.Now;
-                    objectResponse = locateService.findObjectByText(text, country, searchOptionList.ToArray(), null, resultField_AddressByText, cc);
+                    objectResponse = locateService.findObjectByText(singleFieldTextTxtBx.Text, singleFieldCountryTxtBx.Text, searchOptionList.ToArray(), null, resultField_AddressByText, cc);
                     displayTransactionTime(startTime);
                 }
 
@@ -359,8 +355,6 @@ namespace XLocate
                     tbxRES_COUNT.Text = resultAddresses.Length.ToString();
                     dgvResultAddresses.DataSource = resultAddresses;
                     dgvResultAddresses.Update();
-                    dgvResultAddresses.Visible = true;
-                    dgvResultCombinedTransport.Visible = false;
                     if (addressResponse.errorCode != 0)
                     {
                         System.Windows.Forms.MessageBox.Show(this, addressResponse.errorDescription, "AddressResponse.ErrorDescription");
@@ -373,17 +367,7 @@ namespace XLocate
                     resultCombinedTransports = combinedTransportResponse.wrappedResultList;
                     tbxRES_COUNT.Text = resultCombinedTransports.Length.ToString();
                     dgvResultCombinedTransport.DataSource = resultCombinedTransports;
-                    // computed columns
-                    for (int i = 0; i < resultCombinedTransports.Length; i++)
-                    {
-                        ResultCombinedTransport curResultCombinedTransport = resultCombinedTransports[i];
-                        DataGridViewRow dgvRow = dgvResultCombinedTransport.Rows[i];
-                        dgvRow.Cells["start_coords"].Value = curResultCombinedTransport.start.coordinate;
-                        dgvRow.Cells["dest_coords"].Value = curResultCombinedTransport.destination.coordinate;
-                    }
                     dgvResultCombinedTransport.Update();
-                    dgvResultCombinedTransport.Visible = true;
-                    dgvResultAddresses.Visible = false;
                     if (combinedTransportResponse.errorCode != 0)
                     {
                         System.Windows.Forms.MessageBox.Show(this, combinedTransportResponse.errorDescription, "CombinedTransportResponse.ErrorDescription");
@@ -929,20 +913,21 @@ namespace XLocate
             // the selected address properties
             if (e.Button == MouseButtons.Right)
             {
-                ResultAddress curResultAddress = resultAddresses[e.RowIndex];
-                tbxCountry.Text = curResultAddress.country;
-                tbxState.Text = curResultAddress.state;
-                tbxPostCode.Text = curResultAddress.postCode;
-                tbxCity.Text = curResultAddress.city;
-                tbxCity2.Text = curResultAddress.city2;
-                tbxStreet.Text = curResultAddress.street;
-                tbxHouseNumber.Text = curResultAddress.houseNumber;
+                var resultAddress = (ResultAddress)((DataGridView)sender).Rows[e.RowIndex].DataBoundItem;
+
+                tbxCountry.Text = resultAddress.country;
+                tbxState.Text = resultAddress.state;
+                tbxPostCode.Text = resultAddress.postCode;
+                tbxCity.Text = resultAddress.city;
+                tbxCity2.Text = resultAddress.city2;
+                tbxStreet.Text = resultAddress.street;
+                tbxHouseNumber.Text = resultAddress.houseNumber;
                 //
-                tbxLocationX.Text = curResultAddress.coordinates.point.x.ToString();
-                tbxLocationY.Text = curResultAddress.coordinates.point.y.ToString();
+                tbxLocationX.Text = resultAddress.coordinates.point.x.ToString();
+                tbxLocationY.Text = resultAddress.coordinates.point.y.ToString();
                 //
-                tbxSfAddress.Text = displaySingleFieldAddress(curResultAddress);
-                tbxSfCountry.Text = curResultAddress.country;
+                singleFieldTextTxtBx.Text = displaySingleFieldAddress(resultAddress);
+                singleFieldCountryTxtBx.Text = resultAddress.country;
             }
         }
 
@@ -957,7 +942,7 @@ namespace XLocate
                 result += " " + adr.city2;
             if (adr.street != "")
             {
-                result += tbxSINGLE_FIELD_SEPARATORS.Text + adr.street;
+                result += singleFieldSeparatorsTxtBx.Text + adr.street;
                 if (adr.houseNumber != "")
                     result += " " + adr.houseNumber;
             }
@@ -1011,5 +996,15 @@ namespace XLocate
 
             return result;
         }
+
+        //private void dgvResultAddresses_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        //{
+        //    if (e.Button == System.Windows.Forms.MouseButtons.Right)
+        //    {
+
+        //    }
+        //}
+
+
     }
 }

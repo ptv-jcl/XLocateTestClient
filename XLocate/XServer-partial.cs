@@ -7,6 +7,18 @@ using System.Xml.Serialization;
 
 namespace XServer
 {
+    public enum FieldClassificationDescription
+    {
+        NOT_CLASSIFIED = 0,
+        NO_RESULT = 1,
+        NO_INPUT = 2,
+        LOW = 3,
+        MEDIUM = 4,
+        HIGH = 5,
+        PARTIALLY_EXACT = 6,
+        EXACT = 7
+    }
+
     public partial class Point : EncodedGeometry
     {
 
@@ -22,7 +34,7 @@ namespace XServer
                 return "n/a";
         }
     }
-    
+
     partial class Color
     {
         public Color() : base() { }
@@ -49,9 +61,9 @@ namespace XServer
     {
         public override string ToString()
         {
-            return "["+ x + ";" + y + "]";
+            return "[" + x + ";" + y + "]";
         }
-        
+
         public PlainPoint()
             : base()
         { }
@@ -68,7 +80,8 @@ namespace XServer
     {
         public PlainLineString() : base() { }
 
-        public PlainLineString(PlainPoint[] arrPlainPoint):base()
+        public PlainLineString(PlainPoint[] arrPlainPoint)
+            : base()
         {
             this.wrappedPoints = arrPlainPoint;
         }
@@ -87,10 +100,12 @@ namespace XServer
             this.zoom = zoom;
         }
     }
+
     partial class Bitmap
     {
         public Bitmap() : base() { }
-        public Bitmap(string name, Point position, string descr):base()
+        public Bitmap(string name, Point position, string descr)
+            : base()
         {
             this.descr = descr;
             this.name = name;
@@ -107,9 +122,20 @@ namespace XServer
         }
     }
 
+    partial class ResultCombinedTransport
+    {
+        public string StartName { get { return this.start.name; } }
+        public string StartCountry { get { return this.start.country; } }
+        public string StartPoint { get { return this.start.coordinate.point.ToString(); } }
+
+        public string DestinationName { get { return this.destination.name; } }
+        public string DestinationCountry { get { return this.destination.country; } }
+        public string DestinationPoint { get { return this.destination.coordinate.point.ToString(); } }
+    }
+
     partial class ResultAddress
     {
-        public string segmentId 
+        public string segmentId
         {
             get
             {
@@ -119,53 +145,53 @@ namespace XServer
                 }
                 return "";
             }
-            set {}
+            set { }
         }
-        public string TownClassification
+        public FieldClassificationDescription TownClassification
         {
             get
             {
                 foreach (AdditionalField additionField in this.wrappedAdditionalFields)
                 {
-                    if (additionField.field == ResultField.TOWN_CLASSIFICATION) return additionField.value;
+                    if (additionField.field == ResultField.TOWN_CLASSIFICATION) return (FieldClassificationDescription)Enum.Parse(typeof(FieldClassificationDescription), additionField.value);
                 }
-                return "";
+                return FieldClassificationDescription.NOT_CLASSIFIED;
             }
             set { }
         }
-        public string PostcodeClassification
+        public FieldClassificationDescription PostcodeClassification
         {
             get
             {
                 foreach (AdditionalField additionField in this.wrappedAdditionalFields)
                 {
-                    if (additionField.field == ResultField.POSTCODE_CLASSIFICATION) return additionField.value;
+                    if (additionField.field == ResultField.POSTCODE_CLASSIFICATION) return (FieldClassificationDescription)Enum.Parse(typeof(FieldClassificationDescription), additionField.value);
                 }
-                return "";
+                return FieldClassificationDescription.NOT_CLASSIFIED;
             }
             set { }
         }
-        public string StreetClassification
+        public FieldClassificationDescription StreetClassification
         {
             get
             {
                 foreach (AdditionalField additionField in this.wrappedAdditionalFields)
                 {
-                    if (additionField.field == ResultField.STREET_CLASSIFICATION) return additionField.value;
+                    if (additionField.field == ResultField.STREET_CLASSIFICATION) return (FieldClassificationDescription)Enum.Parse(typeof(FieldClassificationDescription), additionField.value);
                 }
-                return "";
+                return FieldClassificationDescription.NOT_CLASSIFIED;
             }
             set { }
         }
-        public string HNClassification
+        public FieldClassificationDescription HNClassification
         {
             get
             {
                 foreach (AdditionalField additionField in this.wrappedAdditionalFields)
                 {
-                    if (additionField.field == ResultField.HOUSENR_CLASSIFICATION) return additionField.value;
+                    if (additionField.field == ResultField.HOUSENR_CLASSIFICATION) return (FieldClassificationDescription)Enum.Parse(typeof(FieldClassificationDescription), additionField.value);
                 }
-                return "";
+                return FieldClassificationDescription.NOT_CLASSIFIED;
             }
             set { }
         }
