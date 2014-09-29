@@ -12,7 +12,7 @@ namespace XLocate.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -430,7 +430,7 @@ namespace XLocate.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("76131 Karlsruhe, Stumpfstr. 1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Malmö")]
         public string ADDRESS {
             get {
                 return ((string)(this["ADDRESS"]));
@@ -439,7 +439,7 @@ namespace XLocate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(",")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string SINGLE_FIELD_SEPARATORS {
             get {
                 return ((string)(this["SINGLE_FIELD_SEPARATORS"]));
@@ -631,7 +631,7 @@ namespace XLocate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("706412336551701")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string xmap_password {
             get {
                 return ((string)(this["xmap_password"]));
@@ -655,7 +655,7 @@ namespace XLocate.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("706412336551701")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string xlocate_password {
             get {
                 return ((string)(this["xlocate_password"]));

@@ -138,10 +138,10 @@
       <Value Profile="(Default)">default</Value>
     </Setting>
     <Setting Name="ADDRESS" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">76131 Karlsruhe, Stumpfstr. 1</Value>
+      <Value Profile="(Default)">Malmö</Value>
     </Setting>
     <Setting Name="SINGLE_FIELD_SEPARATORS" Type="System.String" Scope="User">
-      <Value Profile="(Default)">,</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="XYNLAYER_PRIORITY" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
@@ -189,13 +189,13 @@
       <Value Profile="(Default)">xtok</Value>
     </Setting>
     <Setting Name="xmap_password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">706412336551701</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="xlocate_username" Type="System.String" Scope="User">
       <Value Profile="(Default)">xtok</Value>
     </Setting>
     <Setting Name="xlocate_password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">706412336551701</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

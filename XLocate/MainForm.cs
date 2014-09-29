@@ -20,8 +20,9 @@ namespace XLocate
         XLocateWSService locateService = new XLocateWSService();
         ImageInfo imageInfo = new ImageInfo();
         MapSection mapSection = new MapSection();
-        ResultAddress[] resultAddress = null;
-        ResultCombinedTransport[] resultCombinedTransport = null;
+        ResultAddress[] resultAddresses = null;
+        ResultCombinedTransport[] resultCombinedTransports = null;
+        ResultObject[] resultObects = null;
         ResultField[] resultField_Address;
         ResultField[] resultField_Location;
         ResultField[] resultField_AddressByText;
@@ -102,6 +103,8 @@ namespace XLocate
         private void btnProcessAddress_Click(object sender, EventArgs e)
         {
             Button evtButton = (Button)sender;
+            
+            // TODO check if reset buttons resets everything
             resetButtons();
             List<Layer> lstLayer = new List<Layer>();
             CallerContext cc = new CallerContext()
@@ -148,10 +151,12 @@ namespace XLocate
                     cc.wrappedProperties = new CallerContextProperty[] { ccpCoordFormat, ccpProfile, ccpResponseGeometry };
                 }
 
-                resultAddress = null;
-                resultCombinedTransport = null;
+                resultAddresses = null;
+                resultCombinedTransports = null;
+                resultObects = null;
                 AddressResponse addressResponse = null;
                 CombinedTransportResponse combinedTransportResponse = null;
+                ObjectResponse objectResponse = null;
 
                 if (evtButton.Equals(btnFindAddress))
                 {
@@ -170,9 +175,6 @@ namespace XLocate
                     // SearchOption array is generated
                     XServer.SearchOptionBase[] searchOption = null;
                     List<XServer.SearchOptionBase> listSearchOptions = new List<XServer.SearchOptionBase>();
-                    listSearchOptions.Add(
-                        new NamedSearchOption() { param = "FrequencyFiltering", value = "false" }
-                        );
                     if (cbxSearchOptions.Checked)
                     {
                         listSearchOptions.Add(buildSearchOption(SearchParameter.SEARCH_BINARY, cbxSEARCH_BINARY.Checked ? "1" : "0"));
@@ -195,7 +197,6 @@ namespace XLocate
                         //
                     }
                     searchOption = listSearchOptions.ToArray();
-
 
                     startTime = DateTime.Now;
                     addressResponse = locateService.findAddress(inputAddress, searchOption, null, resultField_Address, cc);
@@ -253,7 +254,7 @@ namespace XLocate
                         if (tbxENGINE_SEARCHRANGE.Text != "")
                             lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_SEARCHRANGE, tbxENGINE_SEARCHRANGE.Text));
                     }
-                    
+
                     startTime = DateTime.Now;
                     //locateService.EnableDecompression = true;
                     addressResponse = locateService.findLocation(inputLocation, lstReverseSearchOptions.ToArray(), null, resultField_Location, cc);
@@ -305,14 +306,58 @@ namespace XLocate
                     startTime = DateTime.Now;
                     displayTransactionTime(startTime);
                 }
+                else if (evtButton.Equals(btnFindObjectByText))
+                {
+                    string text = tbxSfAddress.Text;
+                    string country = tbxSfCountry.Text;
+
+                    List<XServer.SearchOption> searchOptionList = new List<XServer.SearchOption>();
+
+                    if (tbxSINGLE_FIELD_SEPARATORS.Text != "")
+                    {
+                        searchOptionList.Add(buildSearchOption(SearchParameter.SINGLE_FIELD_SEPARATORS, tbxSINGLE_FIELD_SEPARATORS.Text));
+                    }
+                    searchOptionList.Add(buildSearchOption(SearchParameter.ENGINE_COMBINEDTRANSPORTSEARCH_ENABLE, cbxEngineCombinedTransportEnabled.Checked.ToString()));
+                    searchOptionList.Add(buildSearchOption(SearchParameter.ENGINE_ADDRESSSEARCH_ENABLE, cbxEngineAddressEnable.Checked.ToString()));  
+      
+                    // TODO check if it is usefull to also add the other search options
+                    //if (cbxSearchOptions.Checked)
+                    //{
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.SEARCH_BINARY, cbxSEARCH_BINARY.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.SEARCH_PHONETIC, cbxSEARCH_PHONETIC.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.SEARCH_FUZZY, cbxSEARCH_FUZZY.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.STREET_RETURNALLHNR, cbxSTREET_RETURNALLHNR.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.CITY_RETURNALLCITY2, cbxCITY_RETURNALLCITY2.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.MULTIWORDINDEX_ENABLE, cbxMULTIWORDINDEX_ENABLE.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.POSTCODE_AGGREGATE, cbxPOSTCODE_AGGREGATE.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.INTERSECTIONS_ENABLE, cbxINTERSECTIONS_ENABLE.Checked ? "1" : "0"));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.ASTERISKMODE, cboASTERISKMODE));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.COUNTRY_CODETYPE, cboCOUNTRY_CODETYPE));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.STREET_HNRPOSITION, cboSTREET_HNRPOSITION));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.SWAPANDSPLITMODE, cboSWAPANDSPLITMODE));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.HNR_OFFSET, tbxHNR_OFFSET.Text));
+                    //    searchOptionList.Add(buildSearchOption(SearchParameter.RESULT_LANGUAGE, tbxRESULT_LANGUAGE.Text));
+                    //    //
+                    //    if (tbxMAX_RESULT.Text != "")
+                    //        searchOptionList.Add(buildSearchOption(SearchParameter.MAX_RESULT, tbxMAX_RESULT.Text));
+                    //    //
+                    //}
 
 
+                    startTime = DateTime.Now;
+                    objectResponse = locateService.findObjectByText(text, country, searchOptionList.ToArray(), null, resultField_AddressByText, cc);
+                    displayTransactionTime(startTime);
+                }
+
+                // colapse panel based on the results
+                resultSplitContainer.Panel1Collapsed = (addressResponse == null && objectResponse == null);
+                resultSplitContainer.Panel2Collapsed = (combinedTransportResponse == null && objectResponse == null);
 
                 if (addressResponse != null)
                 {
-                    resultAddress = addressResponse.wrappedResultList;
-                    tbxRES_COUNT.Text = resultAddress.Length.ToString();
-                    dgvResultAddresses.DataSource = resultAddress;
+                    resultAddresses = addressResponse.wrappedResultList;
+                    tbxRES_COUNT.Text = resultAddresses.Length.ToString();
+                    dgvResultAddresses.DataSource = resultAddresses;
                     dgvResultAddresses.Update();
                     dgvResultAddresses.Visible = true;
                     dgvResultCombinedTransport.Visible = false;
@@ -320,18 +365,18 @@ namespace XLocate
                     {
                         System.Windows.Forms.MessageBox.Show(this, addressResponse.errorDescription, "AddressResponse.ErrorDescription");
                     }
-                    if (resultAddress.Length > 0)
+                    if (resultAddresses.Length > 0)
                         createToolTips(dgvResultAddresses, addressResponse.wrappedResultList[0].wrappedAdditionalFields);
                 }
                 if (combinedTransportResponse != null)
                 {
-                    resultCombinedTransport = combinedTransportResponse.wrappedResultList;
-                    tbxRES_COUNT.Text = resultCombinedTransport.Length.ToString();
-                    dgvResultCombinedTransport.DataSource = resultCombinedTransport;
+                    resultCombinedTransports = combinedTransportResponse.wrappedResultList;
+                    tbxRES_COUNT.Text = resultCombinedTransports.Length.ToString();
+                    dgvResultCombinedTransport.DataSource = resultCombinedTransports;
                     // computed columns
-                    for (int i = 0; i < resultCombinedTransport.Length; i++)
+                    for (int i = 0; i < resultCombinedTransports.Length; i++)
                     {
-                        ResultCombinedTransport curResultCombinedTransport = resultCombinedTransport[i];
+                        ResultCombinedTransport curResultCombinedTransport = resultCombinedTransports[i];
                         DataGridViewRow dgvRow = dgvResultCombinedTransport.Rows[i];
                         dgvRow.Cells["start_coords"].Value = curResultCombinedTransport.start.coordinate;
                         dgvRow.Cells["dest_coords"].Value = curResultCombinedTransport.destination.coordinate;
@@ -343,8 +388,34 @@ namespace XLocate
                     {
                         System.Windows.Forms.MessageBox.Show(this, combinedTransportResponse.errorDescription, "CombinedTransportResponse.ErrorDescription");
                     }
-                    if (resultCombinedTransport.Length > 0)
+                    if (resultCombinedTransports.Length > 0)
                         createToolTips(dgvResultCombinedTransport, combinedTransportResponse.wrappedResultList[0].wrappedCombinedTransportFields);
+                }
+                if (objectResponse != null)
+                {
+                    List<ResultCombinedTransport> resultCombinedTransportList = new List<ResultCombinedTransport>();
+                    List<ResultAddress> resultAddressList = new List<ResultAddress>();
+                    foreach (var resultObect in objectResponse.wrappedResultList)
+                    {
+                        if (resultObect.combinedTransport != null) resultCombinedTransportList.Add(resultObect.combinedTransport);
+                        if (resultObect.address != null) resultAddressList.Add(resultObect.address);
+                    }
+
+                    dgvResultAddresses.DataSource = resultAddressList;
+                    dgvResultAddresses.Update();
+                    dgvResultCombinedTransport.DataSource = resultCombinedTransportList;
+                    dgvResultCombinedTransport.Update();
+
+                    if (objectResponse.errorCode != 0)
+                    {
+                        System.Windows.Forms.MessageBox.Show(this, objectResponse.errorDescription, "ObjectResponse.ErrorDescription");
+                    }
+
+                    if (resultCombinedTransportList.Count > 0)
+                        createToolTips(dgvResultCombinedTransport, resultCombinedTransportList[0].wrappedCombinedTransportFields);
+                    if (resultAddressList.Count > 0)
+                        createToolTips(dgvResultAddresses, resultAddressList[0].wrappedAdditionalFields);
+
                 }
 
                 evtButton.BackColor = System.Drawing.Color.Green;
@@ -375,15 +446,15 @@ namespace XLocate
             }
             else
             {
-                if ((resultAddress != null) && (resultAddress.Length > 0))
+                if ((resultAddresses != null) && (resultAddresses.Length > 0))
                 {
                     // Prepare CustomLayer for centering Objects 
-                    XServer.Bitmap[] bitmap = new XServer.Bitmap[resultAddress.Length];
-                    for (int i = 0; i < resultAddress.Length; i++)
+                    XServer.Bitmap[] bitmap = new XServer.Bitmap[resultAddresses.Length];
+                    for (int i = 0; i < resultAddresses.Length; i++)
                     {
                         bitmap[i] = new XServer.Bitmap();
-                        bitmap[i].descr = displayResultAddress(resultAddress[i]);
-                        switch (resultAddress[i].detailLevelDescription)
+                        bitmap[i].descr = displayResultAddress(resultAddresses[i]);
+                        switch (resultAddresses[i].detailLevelDescription)
                         {
                             case DetailLevelDescription.HNREXACT: bitmap[i].name = "flaggreen.bmp"; break;
                             case DetailLevelDescription.HNRINTERPOLATED: bitmap[i].name = "flagred.bmp"; break;
@@ -391,26 +462,26 @@ namespace XLocate
                         }
 
                         XServer.Point point = new XServer.Point();
-                        if (resultAddress[i].coordinates.wkb != null)
+                        if (resultAddresses[i].coordinates.wkb != null)
                         {
-                            point.wkb = resultAddress[i].coordinates.wkb;
+                            point.wkb = resultAddresses[i].coordinates.wkb;
                         }
-                        else if (resultAddress[i].coordinates.wkt != null)
+                        else if (resultAddresses[i].coordinates.wkt != null)
                         {
-                            point.wkt = resultAddress[i].coordinates.wkt;
+                            point.wkt = resultAddresses[i].coordinates.wkt;
                         }
-                        else if (resultAddress[i].coordinates.kml != null)
+                        else if (resultAddresses[i].coordinates.kml != null)
                         {   //2010.11.15
                             point.kml = new KML();
-                            point.kml.kml = resultAddress[i].coordinates.kml.kml;
-                            point.kml.wrappedPlacemarks = resultAddress[i].coordinates.kml.wrappedPlacemarks;
+                            point.kml.kml = resultAddresses[i].coordinates.kml.kml;
+                            point.kml.wrappedPlacemarks = resultAddresses[i].coordinates.kml.wrappedPlacemarks;
                         }
                         else
                         {
                             point.point = new PlainPoint()
                             {
-                                x = resultAddress[i].coordinates.point.x,
-                                y = resultAddress[i].coordinates.point.y
+                                x = resultAddresses[i].coordinates.point.x,
+                                y = resultAddresses[i].coordinates.point.y
                             };
                         }
                         bitmap[i].position = point;
@@ -426,18 +497,18 @@ namespace XLocate
                     lstLayer.Add(customLayer);
                     // 2011.12.09: GeometryLayer for the LINESTRINGXYN
 
-                    GeometryLayer glXYN = getXYNLayer(resultAddress);
+                    GeometryLayer glXYN = getXYNLayer(resultAddresses);
                     if (glXYN != null)
                         lstLayer.Add(glXYN);
 
                 }
 
                 // 2011-12-21 Migration combinedTransport
-                if (resultCombinedTransport != null)
+                if (resultCombinedTransports != null)
                 {
                     List<LineString> lstLineString = new List<LineString>();
                     List<XServer.Bitmap> lstBitmapEndpoint = new List<XServer.Bitmap>();
-                    foreach (ResultCombinedTransport curResultCombinedTransport in resultCombinedTransport)
+                    foreach (ResultCombinedTransport curResultCombinedTransport in resultCombinedTransports)
                     {
                         // collect the connection lines...
                         PlainLineString curPlainLineString = new PlainLineString()
@@ -858,7 +929,7 @@ namespace XLocate
             // the selected address properties
             if (e.Button == MouseButtons.Right)
             {
-                ResultAddress curResultAddress = resultAddress[e.RowIndex];
+                ResultAddress curResultAddress = resultAddresses[e.RowIndex];
                 tbxCountry.Text = curResultAddress.country;
                 tbxState.Text = curResultAddress.state;
                 tbxPostCode.Text = curResultAddress.postCode;
@@ -899,9 +970,6 @@ namespace XLocate
             createResultField_Address();
         }
 
-        private void tbxErrorcode_TextChanged(object sender, EventArgs e)
-        {
-        }
         private void displayTransactionTime(DateTime startTime)
         {
             TimeSpan span = DateTime.Now.Subtract(startTime);

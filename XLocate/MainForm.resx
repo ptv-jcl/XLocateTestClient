@@ -120,6 +120,9 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="btnFindAddress.ToolTip" xml:space="preserve">
     <value>public  AddressResponse  findAddress()
 Searches the given address using the specified search options. 
@@ -235,9 +238,6 @@ results. Possible values:
       1 - filter results where the street has no name
       2 - filter streets without a name and duplicate street results.</value>
   </data>
-  <metadata name="resultAddressBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 20</value>
-  </metadata>
   <data name="btnFindAddressByText.ToolTip" xml:space="preserve">
     <value>public AddressResponse findAddressByText()
 Searches the given address as a text snippet and the country using 
@@ -258,6 +258,24 @@ and "Rue d'Etch" &lt; "Rue d'Épernay".</value>
 The separators can be listed with or without blanks.
 Only a blank as value is not allowed. A search without a separator is also possible.</value>
   </data>
+  <data name="btnFindObjectByText.ToolTip" xml:space="preserve">
+    <value>public AddressResponse findAddressByText()
+Searches the given address as a text snippet and the country using 
+the specified search options. To get the unmatched words of this search, 
+set the ResultField UNMATCHED_WORDS. to get the number of 
+unmatched words set the ResultField UNMATCHED_WORDS_COUNT. 
+A separator for the address text snippet can be defined with the 
+SearchParameter  SINGLE_FIELD_SEPARATORS as a SearchOption. 
+PREREQUISITE:  Only for maps 1/2010 or newer. 
+Please note that the default sorting order is taken from the native profile, 
+if the sorting array is empty. 
+Please note also that sorting strings lexicographically is case-sensitive,
+i.e. 'Z' &lt; 'a' and 'z' &lt; 'é' so that "Rue Robert Stumper" &lt; "Rue de Stavelot" 
+and "Rue d'Etch" &lt; "Rue d'Épernay".</value>
+  </data>
+  <metadata name="resultAddressBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 20</value>
+  </metadata>
   <metadata name="TownClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -281,6 +299,33 @@ Only a blank as value is not allowed. A search without a separator is also possi
   </metadata>
   <metadata name="UniqueGeoID_destination.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="TownClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PostcodeClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="StreetClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HNClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="start_coords.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dest_coords.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UniqueGeoID_start.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UniqueGeoID_destination.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="resultAddressBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 20</value>
   </metadata>
   <metadata name="resultCombinedTransportBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>333, 17</value>
