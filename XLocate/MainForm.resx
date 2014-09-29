@@ -120,17 +120,6 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="btnMatchAddress.ToolTip" xml:space="preserve">
-    <value>public  ResultAddress[]  matchAddress()
-Deprecated.
-As of release 1.4, replaced by findAddress()
-Searches the given address using the specified search options. Please 
-note that the default sorting order is taken from the native profile, if
-the sorting array is empty. Please note also that sorting strings 
-lexicographically is case-sensitive, i.e. 'Z' &lt; 'a' and 'z' &lt; 'é' so that 
-"Rue Robert Stumper" &lt; "Rue de Stavelot" and 
-"Rue d'Etch" &lt; "Rue d'Épernay".</value>
-  </data>
   <data name="btnFindAddress.ToolTip" xml:space="preserve">
     <value>public  AddressResponse  findAddress()
 Searches the given address using the specified search options. 
@@ -228,13 +217,6 @@ WKB : the response should contain geometry in the Open-GIS Well Known Binary For
 WKT : the response should contain geometry in the Open-GIS Well Known Text Format
 Specifying more than one of these values means that all of these
 response geometries are to be included in the response.</value>
-  </data>
-  <data name="btnMatchLocation.ToolTip" xml:space="preserve">
-    <value>public  ResultAddress[]  matchLocation()
-Deprecated.
-As of release 1.4, replaced by findLocation()
-Searches the nearest address to the given location. Please
-note that sorting the results is not yet implemented.</value>
   </data>
   <data name="tbxRevENGINE_TOLERANCE.ToolTip" xml:space="preserve">
     <value>Tolerance when reverse geocoding. The reference is the best matching 
