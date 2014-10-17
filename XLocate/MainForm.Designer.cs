@@ -137,8 +137,6 @@ namespace XLocate
             this.singleFieldTextTxtBx = new System.Windows.Forms.TextBox();
             this.resultSplitContainer = new System.Windows.Forms.SplitContainer();
             this.dgvResultAddresses = new System.Windows.Forms.DataGridView();
-            this.dgvResultCombinedTransport = new System.Windows.Forms.DataGridView();
-            this.resultGrpBx = new System.Windows.Forms.GroupBox();
             this.coordinatesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailLevelDescriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -157,6 +155,7 @@ namespace XLocate
             this.adminRegionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appendixDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultAddressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvResultCombinedTransport = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -169,6 +168,7 @@ namespace XLocate
             this.destinationPointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultCombinedTransportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.resultGrpBx = new System.Windows.Forms.GroupBox();
             this.pnlAddressInput.SuspendLayout();
             this.pnlSearchProperties.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -185,10 +185,10 @@ namespace XLocate
             this.resultSplitContainer.Panel2.SuspendLayout();
             this.resultSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultAddresses)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultCombinedTransport)).BeginInit();
-            this.resultGrpBx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultCombinedTransport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultCombinedTransportBindingSource)).BeginInit();
+            this.resultGrpBx.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAddressInput
@@ -1362,7 +1362,7 @@ namespace XLocate
             // resultSplitContainer.Panel2
             // 
             this.resultSplitContainer.Panel2.Controls.Add(this.dgvResultCombinedTransport);
-            this.resultSplitContainer.Size = new System.Drawing.Size(1371, 82);
+            this.resultSplitContainer.Size = new System.Drawing.Size(1239, 82);
             this.resultSplitContainer.SplitterDistance = 41;
             this.resultSplitContainer.TabIndex = 27;
             // 
@@ -1397,47 +1397,9 @@ namespace XLocate
             this.dgvResultAddresses.ReadOnly = true;
             this.dgvResultAddresses.RowTemplate.ReadOnly = true;
             this.dgvResultAddresses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResultAddresses.Size = new System.Drawing.Size(1371, 41);
+            this.dgvResultAddresses.Size = new System.Drawing.Size(1239, 41);
             this.dgvResultAddresses.TabIndex = 17;
             this.dgvResultAddresses.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvResultAddresses_CellMouseClick);
-            // 
-            // dgvResultCombinedTransport
-            // 
-            this.dgvResultCombinedTransport.AutoGenerateColumns = false;
-            this.dgvResultCombinedTransport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvResultCombinedTransport.BackgroundColor = System.Drawing.Color.PowderBlue;
-            this.dgvResultCombinedTransport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultCombinedTransport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.distanceDataGridViewTextBoxColumn,
-            this.durationDataGridViewTextBoxColumn,
-            this.startNameDataGridViewTextBoxColumn,
-            this.startCountryDataGridViewTextBoxColumn,
-            this.startPointDataGridViewTextBoxColumn,
-            this.destinationNameDataGridViewTextBoxColumn,
-            this.destinationCountryDataGridViewTextBoxColumn,
-            this.destinationPointDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
-            this.dgvResultCombinedTransport.DataSource = this.resultCombinedTransportBindingSource;
-            this.dgvResultCombinedTransport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvResultCombinedTransport.Location = new System.Drawing.Point(0, 0);
-            this.dgvResultCombinedTransport.Name = "dgvResultCombinedTransport";
-            this.dgvResultCombinedTransport.Size = new System.Drawing.Size(1371, 37);
-            this.dgvResultCombinedTransport.TabIndex = 18;
-            // 
-            // resultGrpBx
-            // 
-            this.resultGrpBx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.resultGrpBx.Controls.Add(this.resultSplitContainer);
-            this.resultGrpBx.Location = new System.Drawing.Point(13, 625);
-            this.resultGrpBx.Name = "resultGrpBx";
-            this.resultGrpBx.Size = new System.Drawing.Size(1383, 105);
-            this.resultGrpBx.TabIndex = 28;
-            this.resultGrpBx.TabStop = false;
-            this.resultGrpBx.Text = "Results";
             // 
             // coordinatesDataGridViewTextBoxColumn1
             // 
@@ -1579,6 +1541,31 @@ namespace XLocate
             // 
             this.resultAddressBindingSource.DataSource = typeof(XServer.ResultAddress);
             // 
+            // dgvResultCombinedTransport
+            // 
+            this.dgvResultCombinedTransport.AutoGenerateColumns = false;
+            this.dgvResultCombinedTransport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvResultCombinedTransport.BackgroundColor = System.Drawing.Color.PowderBlue;
+            this.dgvResultCombinedTransport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultCombinedTransport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.distanceDataGridViewTextBoxColumn,
+            this.durationDataGridViewTextBoxColumn,
+            this.startNameDataGridViewTextBoxColumn,
+            this.startCountryDataGridViewTextBoxColumn,
+            this.startPointDataGridViewTextBoxColumn,
+            this.destinationNameDataGridViewTextBoxColumn,
+            this.destinationCountryDataGridViewTextBoxColumn,
+            this.destinationPointDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn});
+            this.dgvResultCombinedTransport.DataSource = this.resultCombinedTransportBindingSource;
+            this.dgvResultCombinedTransport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvResultCombinedTransport.Location = new System.Drawing.Point(0, 0);
+            this.dgvResultCombinedTransport.Name = "dgvResultCombinedTransport";
+            this.dgvResultCombinedTransport.Size = new System.Drawing.Size(1239, 37);
+            this.dgvResultCombinedTransport.TabIndex = 18;
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
@@ -1666,12 +1653,25 @@ namespace XLocate
             // 
             this.resultCombinedTransportBindingSource.DataSource = typeof(XServer.ResultCombinedTransport);
             // 
+            // resultGrpBx
+            // 
+            this.resultGrpBx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultGrpBx.Controls.Add(this.resultSplitContainer);
+            this.resultGrpBx.Location = new System.Drawing.Point(13, 625);
+            this.resultGrpBx.Name = "resultGrpBx";
+            this.resultGrpBx.Size = new System.Drawing.Size(1251, 105);
+            this.resultGrpBx.TabIndex = 28;
+            this.resultGrpBx.TabStop = false;
+            this.resultGrpBx.Text = "Results";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(1408, 742);
+            this.ClientSize = new System.Drawing.Size(1276, 742);
             this.Controls.Add(this.resultGrpBx);
             this.Controls.Add(this.singleFieldSearchGrpBx);
             this.Controls.Add(this.groupBox1);
@@ -1706,10 +1706,10 @@ namespace XLocate
             this.resultSplitContainer.Panel2.ResumeLayout(false);
             this.resultSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultAddresses)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultCombinedTransport)).EndInit();
-            this.resultGrpBx.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultCombinedTransport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultCombinedTransportBindingSource)).EndInit();
+            this.resultGrpBx.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

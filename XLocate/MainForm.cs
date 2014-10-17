@@ -9,6 +9,8 @@ using System.Text;
 using System.Net;
 using System.Windows.Forms;
 using System.IO;
+
+using System.Linq;
 using XServer;
 
 namespace XLocate
@@ -947,6 +949,8 @@ namespace XLocate
                 //
                 singleFieldTextTxtBx.Text = displaySingleFieldAddress(resultAddress);
                 singleFieldCountryTxtBx.Text = resultAddress.country;
+
+                Clipboard.SetText(resultAddress.wrappedAdditionalFields.FirstOrDefault(x => x.field == ResultField.SEGMENT_ID).value);
             }
         }
 
