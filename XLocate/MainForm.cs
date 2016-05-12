@@ -33,6 +33,15 @@ namespace XLocate
 
         public MainForm()
         {
+            if (File.Exists(@"d:\xservers source\private.txt"))
+            {
+                using (var reader = new StreamReader(@"d:\xservers source\private.txt"))
+                {
+                    Properties.Settings.Default.xmap_password = reader.ReadLine();
+                    Properties.Settings.Default.xlocate_password = Properties.Settings.Default.xmap_password;
+                }
+            }
+
             InitializeComponent();
             //
             fillCBO(cboASTERISKMODE, new string[] { "0 - disable asterisk mode", "1 - search at the beginning", "2 - search at the end", "3 - search at beginning and at the end" });
@@ -231,7 +240,7 @@ namespace XLocate
                         wrappedBitmaps = new Bitmaps[]{
                             new Bitmaps(){
                                 wrappedBitmaps = new BasicBitmap[]{
-                                    centerBitmap 
+                                    centerBitmap
                                 }
                             }
                         }
@@ -297,10 +306,10 @@ namespace XLocate
                         coordinate = new XServer.Point()
                         {
                             point = new PlainPoint()
-                                {
-                                    x = Convert.ToDouble(tbxLocationX.Text),
-                                    y = Convert.ToDouble(tbxLocationY.Text)
-                                }
+                            {
+                                x = Convert.ToDouble(tbxLocationX.Text),
+                                y = Convert.ToDouble(tbxLocationY.Text)
+                            }
                         }
                     };
 
@@ -828,7 +837,7 @@ namespace XLocate
                 ResultField.DESTINATION_LOCATION_NODE_X,
                 ResultField.DESTINATION_LOCATION_NODE_Y,
                 ResultField.DESTINATION_LOCATION_TILE_X,
-                ResultField.DESTINATION_LOCATION_TILE_Y,                
+                ResultField.DESTINATION_LOCATION_TILE_Y,
                 ResultField.START_LOCATION_COUNTRYCODE,
                 ResultField.START_LOCATION_NODE_N,
                 ResultField.START_LOCATION_NODE_X,
@@ -851,11 +860,15 @@ namespace XLocate
         private void createResultField_Address()
         {
             List<ResultField> lstResultField = new List<ResultField>();
-            lstResultField.AddRange(new ResultField[]{ 
+            lstResultField.AddRange(new ResultField[]{
                 ResultField.TOWN_CLASSIFICATION,
                 ResultField.POSTCODE_CLASSIFICATION,
                 ResultField.STREET_CLASSIFICATION,
                 ResultField.HOUSENR_CLASSIFICATION,
+                ResultField.CLASSIFICATION,
+                ResultField.CLASSIFICATION_DESCRIPTION,
+                ResultField.ADDRESS_CLASSIFICATION,
+                ResultField.ADDRESS_CLASSIFICATION_DESCRIPTION,
                 ResultField.COUNTRY,
                 ResultField.STATE,
                 ResultField.ADMINREGION,
@@ -889,8 +902,6 @@ namespace XLocate
                 ResultField.FOUNDBY_CITY2,
                 ResultField.FOUNDBY_POSTCODE,
                 ResultField.FOUNDBY_STREET,
-                ResultField.CLASSIFICATION,
-                ResultField.CLASSIFICATION_DESCRIPTION,
                 ResultField.SWAPANDSPLITMODE
             });
             if (cbxUseNewFields.Checked)
@@ -949,8 +960,9 @@ namespace XLocate
                 //
                 singleFieldTextTxtBx.Text = displaySingleFieldAddress(resultAddress);
                 singleFieldCountryTxtBx.Text = resultAddress.country;
-
-                Clipboard.SetText(resultAddress.wrappedAdditionalFields.FirstOrDefault(x => x.field == ResultField.SEGMENT_ID).value);
+                var segmentField = resultAddress.wrappedAdditionalFields.FirstOrDefault(x => x.field == ResultField.SEGMENT_ID);
+                if (segmentField != null)
+                    Clipboard.SetText(segmentField.value);
             }
         }
 
