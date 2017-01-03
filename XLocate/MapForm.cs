@@ -104,10 +104,9 @@ namespace XLocate
             }
         }
 
-
         public void renderMap()
         {
-            //try
+            try
             { 
                 int height = pbxMap.Height,width = pbxMap.Width;
                 imageInfo.width = width;
@@ -142,10 +141,10 @@ namespace XLocate
                 }
                 
             }
-            //catch (Exception ex)
-            //{
-            //    System.Windows.Forms.MessageBox.Show(ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void MapForm_SizeChanged(object sender, EventArgs e)
@@ -204,7 +203,6 @@ namespace XLocate
             }
         }
 
-
         private void pbxMap_Click(object sender, EventArgs e)
         {
                 PictureBox s = (PictureBox)sender;
@@ -237,7 +235,7 @@ namespace XLocate
                 lastTooltip = e.Location;
 
 
-            if (map.wrappedObjects != null)
+            if (map != null && map.wrappedObjects != null)
             {
                 List<string> lstDescr = new List<string>();
                 LayerObject refLayerObject = null;
@@ -247,8 +245,8 @@ namespace XLocate
                 {
                     foreach (LayerObject curLayerObject in curObjectInfos.wrappedObjects)
                     {
-                        int curX = Convert.ToInt16(curLayerObject.pixel.x);
-                        int curY = Convert.ToInt16(curLayerObject.pixel.y);
+                        int curX = Convert.ToInt32(curLayerObject.pixel.x);
+                        int curY = Convert.ToInt32(curLayerObject.pixel.y);
                         int curDist = dist2(curX, curY, e.X, e.Y);
                         if ((curDist <= refDist) && (curDist < 50))
                         {
@@ -285,6 +283,7 @@ namespace XLocate
                 }
             }
         }
+
         private int dist2(int x1,int y1,int x2,int y2)
         {
             return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);

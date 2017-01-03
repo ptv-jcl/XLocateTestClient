@@ -129,7 +129,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ENGINE_SEARCHRANGE" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">1000</Value>
     </Setting>
     <Setting Name="UseNewFields" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>

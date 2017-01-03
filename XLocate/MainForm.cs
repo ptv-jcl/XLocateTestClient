@@ -42,6 +42,9 @@ namespace XLocate
                 }
             }
 
+            //locateService.Proxy = new WebProxy("http://localhost.:8888");
+
+
             InitializeComponent();
             //
             fillCBO(cboASTERISKMODE, new string[] { "0 - disable asterisk mode", "1 - search at the beginning", "2 - search at the end", "3 - search at beginning and at the end" });
@@ -331,9 +334,8 @@ namespace XLocate
                             lstReverseSearchOptions.Add(buildReverseSearchOption(ReverseSearchParameter.ENGINE_SEARCHRANGE, tbxENGINE_SEARCHRANGE.Text));
                     }
 
-                    combinedTransportResponse = locateService.findCombinedTransportByLocation(inputLocation, lstReverseSearchOptions.ToArray(), resultField_CombinedTransport, cc);
-
                     startTime = DateTime.Now;
+                    combinedTransportResponse = locateService.findCombinedTransportByLocation(inputLocation, lstReverseSearchOptions.ToArray(), resultField_CombinedTransport, cc);
                     displayTransactionTime(startTime);
                 }
                 else if (evtButton.Equals(btnFindObjectByText))
@@ -1039,7 +1041,5 @@ namespace XLocate
 
         //    }
         //}
-
-
     }
 }
