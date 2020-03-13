@@ -74,9 +74,6 @@ namespace XLocate
             customLayer.objectInfos = ObjectInfoType.REFERENCEPOINT;
             customLayer.visible = true;
             //
-            tbxServiceAddressLocate.Text = Properties.Settings.Default.xlocate;
-            tbxServiceAddressMap.Text = Properties.Settings.Default.xmap;
-            //
             tbxCountry.Text = Properties.Settings.Default.COUNTRY;
             tbxState.Text = Properties.Settings.Default.STATE;
             tbxPostCode.Text = Properties.Settings.Default.POSTCODE;
@@ -113,6 +110,22 @@ namespace XLocate
             toolTip1.AutoPopDelay = int.MaxValue;
 
             resultSplitContainer.Panel2Collapsed = true;
+
+            xlocateUrlComboBox.Items.Add("http://localhost:50020/xlocate/ws/XLocate");
+            xlocateUrlComboBox.Items.Add("https://xlocate-tln-eu-n.cloud.ptvgroup.com/xlocate/ws/XLocate");
+            xlocateUrlComboBox.Items.Add("https://xlocate-eu-n.cloud.ptvgroup.com/xlocate/ws/XLocate");
+            xlocateUrlComboBox.Items.Add("https://api.cloud.ptvgroup.com/xlocate/ws/XLocate");
+            xlocateUrlComboBox.Items.Add("https://xlocate-au-n.cloud.ptvgroup.com/xlocate/ws/XLocate");
+            xlocateUrlComboBox.Items.Add("https://xlocate-us-n.cloud.ptvgroup.com/xlocate/ws/XLocate");
+            xlocateUrlComboBox.SelectedIndex = 0;
+
+            xmapUrlComboBox.Items.Add("http://localhost:50010/xmap/ws/XMap");
+            xmapUrlComboBox.Items.Add("https://xmap-tln-eu-n.cloud.ptvgroup.com/xmap/ws/XMap");
+            xmapUrlComboBox.Items.Add("https://xmap-eu-n.cloud.ptvgroup.com/xmap/ws/XMap");
+            xmapUrlComboBox.Items.Add("https://api.cloud.ptvgroup.com/xmap/ws/XMap");
+            xmapUrlComboBox.Items.Add("https://xmap-au-n.cloud.ptvgroup.com/xmap/ws/XMap");
+            xmapUrlComboBox.Items.Add("https://xmap-us-n.cloud.ptvgroup.com/xmap/ws/XMap");
+            xmapUrlComboBox.SelectedIndex = 0;
         }
 
         private void btnProcessAddress_Click(object sender, EventArgs e)
@@ -139,7 +152,7 @@ namespace XLocate
                 tbxTAcurr.Text = "";
                 DateTime startTime;
 
-                locateService.Url = tbxServiceAddressLocate.Text;
+                locateService.Url = xlocateUrlComboBox.Text;
 
                 if (cbxCallerContextProperties.Checked)
                 {
@@ -588,9 +601,9 @@ namespace XLocate
                 }
 
 
-                if ((lstLayer.Count > 0) && (tbxServiceAddressMap.Text != "") && (cbxDisplayMap.Checked))
+                if ((lstLayer.Count > 0) && (xmapUrlComboBox.Text != "") && (cbxDisplayMap.Checked))
                 {
-                    MapForm mapForm = new MapForm(tbxServiceAddressMap.Text, lstLayer.ToArray(), (cc != null) ? (getSelectedString(cboCoordFormat)) : (null), tbxMapProfile.Text);
+                    MapForm mapForm = new MapForm(xmapUrlComboBox.Text, lstLayer.ToArray(), (cc != null) ? (getSelectedString(cboCoordFormat)) : (null), tbxMapProfile.Text);
                     mapForm.Show(this);
                 }
 

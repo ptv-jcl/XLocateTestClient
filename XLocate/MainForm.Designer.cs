@@ -73,8 +73,6 @@ namespace XLocate
             this.cbxUseNewFields = new System.Windows.Forms.CheckBox();
             this.cbxDisplayMap = new System.Windows.Forms.CheckBox();
             this.labServiceAddress_Map = new System.Windows.Forms.Label();
-            this.tbxServiceAddressMap = new System.Windows.Forms.TextBox();
-            this.tbxServiceAddressLocate = new System.Windows.Forms.TextBox();
             this.labServiceAddress_Locate = new System.Windows.Forms.Label();
             this.labRES_COUNT = new System.Windows.Forms.Label();
             this.tbxRES_COUNT = new System.Windows.Forms.TextBox();
@@ -169,6 +167,8 @@ namespace XLocate
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultCombinedTransportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.resultGrpBx = new System.Windows.Forms.GroupBox();
+            this.xmapUrlComboBox = new System.Windows.Forms.ComboBox();
+            this.xlocateUrlComboBox = new System.Windows.Forms.ComboBox();
             this.pnlAddressInput.SuspendLayout();
             this.pnlSearchProperties.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -181,6 +181,7 @@ namespace XLocate
             this.groupBox1.SuspendLayout();
             this.singleFieldSearchGrpBx.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resultSplitContainer)).BeginInit();
             this.resultSplitContainer.Panel1.SuspendLayout();
             this.resultSplitContainer.Panel2.SuspendLayout();
             this.resultSplitContainer.SuspendLayout();
@@ -631,13 +632,13 @@ namespace XLocate
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.xlocateUrlComboBox);
+            this.panel1.Controls.Add(this.xmapUrlComboBox);
             this.panel1.Controls.Add(this.labMapProfile);
             this.panel1.Controls.Add(this.tbxMapProfile);
             this.panel1.Controls.Add(this.cbxUseNewFields);
             this.panel1.Controls.Add(this.cbxDisplayMap);
             this.panel1.Controls.Add(this.labServiceAddress_Map);
-            this.panel1.Controls.Add(this.tbxServiceAddressMap);
-            this.panel1.Controls.Add(this.tbxServiceAddressLocate);
             this.panel1.Controls.Add(this.labServiceAddress_Locate);
             this.panel1.Location = new System.Drawing.Point(8, 135);
             this.panel1.Name = "panel1";
@@ -693,22 +694,6 @@ namespace XLocate
             this.labServiceAddress_Map.Size = new System.Drawing.Size(105, 13);
             this.labServiceAddress_Map.TabIndex = 3;
             this.labServiceAddress_Map.Text = "ServiceAddress Map";
-            // 
-            // tbxServiceAddressMap
-            // 
-            this.tbxServiceAddressMap.Location = new System.Drawing.Point(146, 29);
-            this.tbxServiceAddressMap.Name = "tbxServiceAddressMap";
-            this.tbxServiceAddressMap.Size = new System.Drawing.Size(231, 20);
-            this.tbxServiceAddressMap.TabIndex = 2;
-            this.tbxServiceAddressMap.Text = "http://127.0.0.1:50010/xmap/ws/XMap";
-            // 
-            // tbxServiceAddressLocate
-            // 
-            this.tbxServiceAddressLocate.Location = new System.Drawing.Point(146, 3);
-            this.tbxServiceAddressLocate.Name = "tbxServiceAddressLocate";
-            this.tbxServiceAddressLocate.Size = new System.Drawing.Size(231, 20);
-            this.tbxServiceAddressLocate.TabIndex = 1;
-            this.tbxServiceAddressLocate.Text = "http://127.0.0.1:50020/xlocate/ws/XLocate";
             // 
             // labServiceAddress_Locate
             // 
@@ -1666,6 +1651,22 @@ namespace XLocate
             this.resultGrpBx.TabStop = false;
             this.resultGrpBx.Text = "Results";
             // 
+            // xmapUrlComboBox
+            // 
+            this.xmapUrlComboBox.FormattingEnabled = true;
+            this.xmapUrlComboBox.Location = new System.Drawing.Point(139, 28);
+            this.xmapUrlComboBox.Name = "xmapUrlComboBox";
+            this.xmapUrlComboBox.Size = new System.Drawing.Size(242, 21);
+            this.xmapUrlComboBox.TabIndex = 58;
+            // 
+            // xlocateUrlComboBox
+            // 
+            this.xlocateUrlComboBox.FormattingEnabled = true;
+            this.xlocateUrlComboBox.Location = new System.Drawing.Point(139, 3);
+            this.xlocateUrlComboBox.Name = "xlocateUrlComboBox";
+            this.xlocateUrlComboBox.Size = new System.Drawing.Size(242, 21);
+            this.xlocateUrlComboBox.TabIndex = 59;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1704,6 +1705,7 @@ namespace XLocate
             this.panel4.PerformLayout();
             this.resultSplitContainer.Panel1.ResumeLayout(false);
             this.resultSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.resultSplitContainer)).EndInit();
             this.resultSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultAddresses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultAddressBindingSource)).EndInit();
@@ -1721,7 +1723,6 @@ namespace XLocate
         private System.Windows.Forms.Label labCountry;
         private System.Windows.Forms.Panel pnlSearchProperties;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbxServiceAddressLocate;
         private System.Windows.Forms.Label labServiceAddress_Locate;
         private System.Windows.Forms.TextBox tbxHouseNumber;
         private System.Windows.Forms.TextBox tbxStreet;
@@ -1787,7 +1788,6 @@ namespace XLocate
         private System.Windows.Forms.Label labENGINE_FILTERMODE;
         private System.Windows.Forms.TextBox tbxENGINE_FILTERMODE;
         private System.Windows.Forms.Label labServiceAddress_Map;
-        private System.Windows.Forms.TextBox tbxServiceAddressMap;
         private System.Windows.Forms.CheckBox cbxDisplayMap;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox tbxErrorcode;
@@ -1855,6 +1855,8 @@ namespace XLocate
         private System.Windows.Forms.DataGridViewTextBoxColumn destinationCountryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn destinationPointDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox xlocateUrlComboBox;
+        private System.Windows.Forms.ComboBox xmapUrlComboBox;
     }
 }
 
